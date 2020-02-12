@@ -1,0 +1,15 @@
+/**
+  * This file serves for all global styles in the Website
+ */
+
+html {
+  margin: 0 auto;
+  background-color: whitesmoke;
+}
+
+$site-width: 100vw;
+$site-height-min: 100vh;
+
+@function get-margins-center($width-object, $width-view) {
+  @return 0.5*($width-view - $width-object);
+}

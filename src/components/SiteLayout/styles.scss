@@ -1,0 +1,10 @@
+@import "static/variables";
+
+$width-view: 70vw;
+
+#site-layout {
+  width: $width-view;
+  $margin: get-margins-center($width-view, $site-width);
+  margin: 0 $margin 0 $margin;
+  background-color: #444444;
+}
