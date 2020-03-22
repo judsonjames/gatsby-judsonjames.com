@@ -3,7 +3,10 @@ import SiteLayout from "../../components/SiteLayout";
 
 const Blog = (): JSX.Element => {
     return (
-        <SiteLayout>
+        <SiteLayout
+            title={"Judson James | Blog"}
+            description={"The coolest blog you'll ever get to read"}
+        >
             <div>
                 Blog Page
             </div>
