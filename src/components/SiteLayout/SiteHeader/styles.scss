@@ -1,7 +1,29 @@
-@import "../../../../static/styles/constants";
+@import "static/styles/classes";
+@import "static/styles/constants";
 
 #site-header {
-  width: $site-width;
-  background-color: white;
-  color: black;
+  display: block;
+  margin: auto;
+}
+
+.menu-item {
+  @extend .__menu-base;
+  margin: 25px 3vw 0 3vw;
+  float: left;
+  font-size: 1.5rem;
+  text-align: center;
+  font-family: Tahoma, sans-serif;
+
+  color: $white-text;
+  line-height: 2;
+
+  a {
+    color: $white-text;
+    text-decoration: none;
+  }
+}
+
+.active {
+  border-bottom: 5px solid $white-text;
+  border-color: $white-text;
 }

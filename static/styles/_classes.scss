@@ -10,3 +10,14 @@
 .__header-description {
   font-family: Arial, monospace;
 }
+
+.__overlay-base {
+  //position: absolute;
+  z-index: 1;
+}
+
+.__menu-base {
+  @extend .__overlay-base;
+  right: 1.5vw;
+  top: 1.5vh;
+}

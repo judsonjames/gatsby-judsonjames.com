@@ -1,5 +1,6 @@
 import React from "react";
-import HomeHeader from "../components/HomeHeader";
+import ProfileThesis from "../components/HomeHeader";
+import MenuComponent from "../components/Menu";
 import SiteLayout from "../components/SiteLayout";
 
 //
@@ -30,11 +31,11 @@ const IndexPage = (): JSX.Element => {
     <SiteLayout
         title={"Judson James | Home"}
         description={"A Full Stack Developer who loves to work with new and interesting projects."}
-        hideHeader={true}
+        hideHeader={false}
         hideFooter={true}
     >
         <div>
-            <HomeHeader/>
+            <ProfileThesis/>
         </div>
     </SiteLayout>
   );

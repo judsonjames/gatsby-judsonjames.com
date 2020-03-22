@@ -3,15 +3,11 @@
 
 .not-found {
   height: $site-height-min;
-  background-color: $background-blue;
-
-  padding-top: 25vh;
-  transition: padding-top 0.5s linear;
-  -webkit-transition: padding-top 0.5s linear;
+  background-color: $blue-background;
 
   .not-found__base {
     @extend .__centered;
-    color: $text-color-white;
+    color: $white-text;
     font-family: Verdana, sans-serif;
     line-height: 2;
     text-rendering: optimizeLegibility;
