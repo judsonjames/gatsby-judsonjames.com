@@ -5,7 +5,6 @@ import config from "../../config/website";
 export interface ISEOProps {
     title: string;
     description: string;
-    currentSite: string;
 }
 
 /**
@@ -13,7 +12,7 @@ export interface ISEOProps {
  * @constructor
  */
 const SEO = (props: ISEOProps): JSX.Element => {
-    const {title, description, currentSite} = props;
+    const {title, description} = props;
     const realPrefix: string = config.pathPrefix === "/" ? "" : config.pathPrefix;
     const image = config.siteUrl + realPrefix + config.siteLogo;
     return (
@@ -28,7 +27,7 @@ const SEO = (props: ISEOProps): JSX.Element => {
             <link rel={"canonical"} href={config.siteUrl}/>
 
             {/* Google */}
-            <meta itemProp={"name"} content={currentSite}/>
+            <meta itemProp={"name"} content={name}/>
             <meta itemProp={"description"} content={description}/>
             <meta itemProp={"image"} content={image}/>
 
@@ -40,10 +39,10 @@ const SEO = (props: ISEOProps): JSX.Element => {
             <meta property="og:image" content={image}/>
 
             {/* Twitter */}
-            <meta name="twitter:card" content="summary_large_image"/>
+            <meta name="twitter:card" content={title}/>
             <meta name="twitter:creator" content={config.userTwitter ? config.userTwitter : ""}/>
-            <meta name="twitter:title" content={config.title} />
-            <meta name="twitter:description" content={config.description}/>
+            <meta name="twitter:title" content={title} />
+            <meta name="twitter:description" content={description}/>
             <meta name="twitter:image" content={image}/>
         </Helmet>
     );
