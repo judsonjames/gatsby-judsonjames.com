@@ -333,3 +333,6 @@ tags
 # Sonarlint plugin
 
 # End of https://www.gitignore.io/api/vim,node,sass,react,linux,macos,webstorm+all,intellij+all
+#
+# Beginning of Custom .gitignore
+public/

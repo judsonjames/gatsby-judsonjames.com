@@ -1,4 +1,0 @@
-
-@function get-margins-center($width-object, $width-view) {
-  @return 0.5*($width-view - $width-object);
-}
