@@ -3,7 +3,10 @@ import SiteLayout from "../../components/SiteLayout";
 
 const Contact = (): JSX.Element => {
     return (
-        <SiteLayout>
+        <SiteLayout
+            title={"Judson James | Contact"}
+            description={"Contact Judson for more information."}
+        >
             <div>
                 Contact Page
             </div>

@@ -1,4 +1,5 @@
 import React from "react";
+import HomeHeader from "../components/HomeHeader";
 import SiteLayout from "../components/SiteLayout";
 
 //
@@ -26,9 +27,14 @@ import SiteLayout from "../components/SiteLayout";
 
 const IndexPage = (): JSX.Element => {
   return (
-    <SiteLayout>
+    <SiteLayout
+        title={"Judson James | Home"}
+        description={"A Full Stack Developer who loves to work with new and interesting projects."}
+        hideHeader={true}
+        hideFooter={true}
+    >
         <div>
-            Hi there, I'm Judson
+            <HomeHeader/>
         </div>
     </SiteLayout>
   );

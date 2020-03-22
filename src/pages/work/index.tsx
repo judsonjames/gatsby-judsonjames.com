@@ -1,5 +1,5 @@
 import React from "react";
-import SiteLayout from '../../components/SiteLayout';
+import SiteLayout from "../../components/SiteLayout";
 
 const Work = (): JSX.Element => {
     return (

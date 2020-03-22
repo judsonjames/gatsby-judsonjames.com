@@ -1,0 +1,21 @@
+/**
+  * This file serves for all global styles in the Website
+ */
+
+// Browser reset
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: whitesmoke;
+}
+
+$site-width: 100vw;
+$site-height-min: 100vh;
+
+// Common Colors and Themes
+$background-blue: rgba(37, 183, 203, 0.6);
+$text-color-white: rgba(255, 255, 255, 0.9);
+
+// Breakpoints
+$iPhone6-width: 736px;
+$iPad-width: 1024px;
