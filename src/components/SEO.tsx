@@ -27,7 +27,7 @@ const SEO = (props: ISEOProps): JSX.Element => {
             <link rel={"canonical"} href={config.siteUrl}/>
 
             {/* Google */}
-            <meta itemProp={"name"} content={name}/>
+            <meta itemProp={"name"} content={title}/>
             <meta itemProp={"description"} content={description}/>
             <meta itemProp={"image"} content={image}/>
 
