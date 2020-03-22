@@ -7,6 +7,7 @@ const HomeHeader = (): JSX.Element => {
             <img className={"home-header__profile-pic"} src={"/img/profile_pic.jpg"} alt={"profile_picture"}/>
             <h1 className={"home-header__name"}>Judson James</h1>
             <h3 className={"home-header__title"}>Full Stack Developer</h3>
+            <img className={"home-header__chevron"} src={"/svg/chevron_down.svg"} alt={"chevron_down"}/>
         </div>
     );
 };

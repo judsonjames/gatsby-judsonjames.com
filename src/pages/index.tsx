@@ -1,5 +1,5 @@
 import React from "react";
-import ProfileThesis from "../components/HomeHeader";
+import HomeHeader from "../components/HomeHeader";
 import MenuComponent from "../components/Menu";
 import SiteLayout from "../components/SiteLayout";
 
@@ -35,7 +35,7 @@ const IndexPage = (): JSX.Element => {
         hideFooter={true}
     >
         <div>
-            <ProfileThesis/>
+            <HomeHeader/>
         </div>
     </SiteLayout>
   );

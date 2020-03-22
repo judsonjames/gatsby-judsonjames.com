@@ -15,7 +15,15 @@ module.exports = {
         host: `https://focused-lamarr-93f88f.netlify.com/`,
         sitemap: `https://focused-lamarr-93f88f.netlify.com/sitemap.xml`,
         policy: [{ userAgent: '*', allow: '/'}]
+      },
+    },
+    {
+      resolve: `gatsby-plugin-react-svg`,
+      options: {
+        rule: {
+          include: /svg/
+        }
       }
-    }
+    },
   ],
 };
