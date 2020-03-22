@@ -32,7 +32,7 @@ const SEO = (props: ISEOProps): JSX.Element => {
             <meta itemProp={"image"} content={image}/>
 
             {/* Facebook */}
-            <meta property="og:url" content="https://focused-lamarr-93f88f.netlify.com/"/>
+            <meta property="og:url" content={config.siteUrl}/>
             <meta property="og:type" content="website"/>
             <meta property="og:title" content={title}/>
             <meta property="og:description" content={description}/>
