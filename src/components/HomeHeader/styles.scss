@@ -1,19 +1,17 @@
 @import "static/styles/constants";
 @import "static/styles/classes";
 
-$text-color: rgba(255, 255, 255, 0.8);
-
 .home-header {
   $padding-top: 12.5vh;
   min-height: $site-height-min - $padding-top;
-  background-color: $background-blue;
+  background-color: $blue-background;
 
   padding-top: $padding-top;
 
   .home-header__name {
     @extend .__centered;
     font-family: Tahoma, sans-serif;
-    color: $text-color;
+    color: $white-text;
     font-size: 3.5rem;
     font-weight: bolder;
     line-height: 1.5;
@@ -23,7 +21,7 @@ $text-color: rgba(255, 255, 255, 0.8);
 
   .home-header__title {
     @extend .__centered;
-    color: $text-color;
+    color: $white-text;
     font-family: Tahoma, sans-serif;
     font-size: 2rem;
     font-weight: lighter;
@@ -34,8 +32,8 @@ $text-color: rgba(255, 255, 255, 0.8);
 
   .home-header__profile-pic {
     @extend .__centered;
+    border: 3px solid $white-text;
     border-radius: 50%;
-    border-color: $background-blue;
 
     min-width: 30vw;
     max-width: 80vw;
