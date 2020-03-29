@@ -10,6 +10,7 @@ module.exports = {
     `gatsby-plugin-tslint`,
     `gatsby-plugin-offline`,
     `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-sitemap`,
     {
       resolve: `gatsby-plugin-robots-txt`,
       options: {
