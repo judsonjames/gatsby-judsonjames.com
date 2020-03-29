@@ -1,22 +1,20 @@
 import React from "react";
-import SEO from "../SEO";
+import SEO, {ISEOProps} from "../SEO";
 import SiteFooter from "./SiteFooter";
 import SiteHeader from "./SiteHeader";
 import "./styles.scss";
 
-interface SiteLayoutProps {
+interface ISiteLayoutProps extends ISEOProps {
     children: JSX.Element;
-    title: string;
-    description: string;
     hideHeader?: boolean;
     hideFooter?: boolean;
 }
 
-const SiteLayout = (props: SiteLayoutProps): JSX.Element => {
-    const { title, description, hideHeader, hideFooter } = props;
+const SiteLayout = (props: ISiteLayoutProps): JSX.Element => {
+    const { title, description, imageRef, hideHeader, hideFooter } = props;
     return (
         <div id={"site-layout"}>
-            <SEO title={title} description={description}/>
+            <SEO title={title} description={description} imageRef={imageRef}/>
             {!hideHeader &&
                 <SiteHeader/>
             }
