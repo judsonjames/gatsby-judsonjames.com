@@ -19,7 +19,7 @@ const SEO = (props: ISEOProps): JSX.Element => {
         <Helmet>
             {/* Base HTML Meta Tags*/}
             <html lang={config.siteLanguage}/>
-            <title>{title}</title>
+            <title>Judson James</title>
             <meta name={"description"} content={description}/>
             <meta charSet={"utf-8"}/>
             <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1"/>

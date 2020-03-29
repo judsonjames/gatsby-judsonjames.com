@@ -1,0 +1,8 @@
+@import "static/styles/constants";
+@import "static/styles/classes";
+
+.home__about-section {
+  background-color: $white-text;
+  color: rgba(0, 0, 0, 0.9);
+  height: 100vh;
+}

@@ -1,4 +1,5 @@
 import React from "react";
+import AboutSection from "../components/AboutSection";
 import HomeHeader from "../components/HomeHeader";
 import MenuComponent from "../components/Menu";
 import SiteLayout from "../components/SiteLayout";
@@ -36,6 +37,7 @@ const IndexPage = (): JSX.Element => {
     >
         <div>
             <HomeHeader/>
+            <AboutSection/>
         </div>
     </SiteLayout>
   );

@@ -44,9 +44,9 @@
   .home-header__chevron {
     @extend .__centered;
     opacity: 0.9;
-    margin-top: 5vh;
 
-    width: 5vw;
+    width: 100px;
+    margin-top: 2.5vh;
     cursor: pointer;
 
     -moz-animation: chevron-bounce 1.5s infinite;
