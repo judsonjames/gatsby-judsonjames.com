@@ -2,7 +2,42 @@
 @import "static/styles/classes";
 
 .home__about-section {
-  background-color: $white-text;
-  color: rgba(0, 0, 0, 0.9);
-  height: 100vh;
+  background-color: $blue-sky-background;
+  color: $white-text;
+  min-height: 100vh;
+  font-family: Tahoma, sans-serif;
+
+  .about__inner-div {
+    background-color: $silver-background;
+    box-shadow: 0 0 5px 5px $silver-background;
+    color: rgba(0, 0, 0, 0.9);
+    width: 80vw;
+    min-height: 100vh;
+    margin: 0 auto;
+    padding: 0.1vh 0 2.5vh 0;
+
+    .about__text {
+      padding-left: 5vw;
+      font-weight: 400;
+      font-size: 1.4rem;
+      line-height: 1.25;
+    }
+
+    h1 {
+      font-weight: 700;
+      font-size: 5rem;
+      padding-left: 5vw;
+      text-decoration: underline solid;
+    }
+
+    ul {
+      @extend .about__text;
+      padding-left: 7.5vw;
+    }
+
+    p {
+      @extend .about__text;
+      padding-right: 5vw;
+    }
+  }
 }

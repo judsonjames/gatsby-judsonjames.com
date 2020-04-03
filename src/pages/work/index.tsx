@@ -1,11 +1,16 @@
 import React from "react";
 import SiteLayout from "../../components/SiteLayout";
+import Technologies from "../../components/Technologies";
 
 const Work = (): JSX.Element => {
     return (
-        <SiteLayout>
+        <SiteLayout
+            title={"Judson James | Work"}
+            description={""}
+            imageRef={"/img/profile_pic"}
+        >
             <div>
-                Work Page
+                <Technologies/>
             </div>
         </SiteLayout>
     );
