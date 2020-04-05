@@ -27,6 +27,12 @@
   }
 }
 
+.header__nav-icon {
+  fill: $white-text;
+  width: 25%;
+  height: 55px;
+}
+
 .active {
   border-bottom: 5px solid $white-text;
   border-color: $white-text;

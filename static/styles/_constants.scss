@@ -7,6 +7,11 @@ html, body {
   margin: 0;
   padding: 0;
   background-color: whitesmoke;
+
+  scrollbar-width: none;
+}
+::-webkit-scrollbar {
+  width: 0;
 }
 
 $site-width: 100vw;

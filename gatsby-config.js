@@ -11,6 +11,8 @@ module.exports = {
     `gatsby-plugin-offline`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sitemap`,
+    `gatsby-plugin-react-svg`,
+    `gatsby-plugin-smoothscroll`,
     {
       resolve: `gatsby-plugin-robots-txt`,
       options: {
@@ -18,14 +20,6 @@ module.exports = {
         sitemap: `https://focused-lamarr-93f88f.netlify.com/sitemap.xml`,
         policy: [{ userAgent: '*', allow: '/'}]
       },
-    },
-    {
-      resolve: `gatsby-plugin-react-svg`,
-      options: {
-        rule: {
-          include: /svg/
-        }
-      }
     },
   ],
 };

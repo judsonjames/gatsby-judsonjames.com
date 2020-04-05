@@ -1,4 +1,8 @@
 import React from "react";
+import Blog from "../../../../static/svg/book.svg";
+import Email from "../../../../static/svg/email.svg";
+import Home from "../../../../static/svg/home.svg";
+import Work from "../../../../static/svg/work.svg";
 import "./styles.scss";
 
 interface IMenuItemProps {
@@ -8,25 +12,27 @@ interface IMenuItemProps {
 }
 
 interface IPath {
-    name: string;
+    icon: JSX.Element;
     path: string;
 }
 
+
+
 const validPaths: IPath[] = [
     {
-        name: "Home",
+        icon: <Home className={"header__nav-icon"}/>,
         path: "/",
     },
     {
-        name: "Work",
+        icon: <Work className={"header__nav-icon"}/>,
         path: "/work",
     },
     {
-        name: "Blog",
+        icon: <Blog className={"header__nav-icon"}/>,
         path: "/blog",
     },
     {
-        name: "Contact",
+        icon: <Email className={"header__nav-icon"}/>,
         path: "/contact",
     },
 ];
@@ -56,7 +62,11 @@ const SiteHeader = (): JSX.Element => {
     return (
         <div id={"site-header"}>
             {validPaths.map((path: IPath, i: number) => {
-                return <MenuItem key={i} text={path.name} redirect={path.path.toLowerCase()} active={i === activeTab}/>;
+                return (
+                    <a key={i} href={path.path.toLowerCase()}>
+                        {path.icon}
+                    </a>
+                );
             })}
         </div>
     );
