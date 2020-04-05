@@ -1,6 +1,5 @@
 import scrollTo from "gatsby-plugin-smoothscroll";
 import React from "react";
-
 import "./styles.scss";
 
 const HomeHeader = (): JSX.Element => {
