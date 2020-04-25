@@ -31,7 +31,7 @@
 
   .home-header__profile-pic {
     @extend .__centered;
-    $animation: margin-top 0.5s linear;
+    //$animation: margin-top 0.5s linear;
 
     border: 3px solid $white-text;
     border-radius: 50%;
