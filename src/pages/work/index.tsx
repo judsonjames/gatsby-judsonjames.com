@@ -27,6 +27,7 @@ const Work = (): JSX.Element => {
                         "way of giving back to the community."
                     }
                     dates={"January 2020 - Present"}
+                    tags={["Leadership", "Java", "Electronics"]}
                 />
                 <WorkItem
                     title={"Software Developer"}

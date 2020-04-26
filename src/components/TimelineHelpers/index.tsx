@@ -1,6 +1,7 @@
 import React from "react";
 import { VerticalTimelineElement } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
+import Code from "../../../static/svg/code.svg";
 import School from "../../../static/svg/school.svg";
 import Work from "../../../static/svg/work.svg";
 
@@ -12,7 +13,14 @@ export interface ItemProps {
     subtitle: string;
     description: string;
     dates: string;
+    tags?: string[];
 }
+
+const tagItem = (text: string): JSX.Element => (
+    <div>
+        {text}
+    </div>
+);
 
 /**
  * Timeline Element Item used to represent held Employment
@@ -32,6 +40,7 @@ export const WorkItem = (props: ItemProps): JSX.Element => {
             <h3 className={"vertical-timeline-element-title"}>{props.title}</h3>
             <h4 className={"vertical-timeline-element-subtitle"}>{props.subtitle}</h4>
             <p>{props.description}</p>
+            {props.tags && props.tags.length && props.tags.sort().map((text: string) => tagItem(text))}
         </VerticalTimelineElement>
     );
 };
@@ -54,6 +63,7 @@ export const EducationItem = (props: ItemProps): JSX.Element => {
             <h3 className={"vertical-timeline-element-title"}>{props.title}</h3>
             <h4 className={"vertical-timeline-element-subtitle"}>{props.subtitle}</h4>
             <p>{props.description}</p>
+            {props.tags && props.tags.length && props.tags.sort().map((text: string) => tagItem(text))}
         </VerticalTimelineElement>
     );
 };
@@ -71,11 +81,12 @@ export const OpenSourceItem = (props: ItemProps): JSX.Element => {
             contentArrowStyle={{ borderRight: "7px solid  rgb(33, 150, 243)" }}
             date={props.dates}
             iconStyle={{ background: "rgb(33, 150, 243)", color: "#fff" }}
-            icon={props.icon}
+            icon={<Code/>}
         >
             <h3 className={"vertical-timeline-element-title"}>{props.title}</h3>
             <h4 className={"vertical-timeline-element-subtitle"}>{props.subtitle}</h4>
             <p>{props.description}</p>
+            {props.tags && props.tags.length && props.tags.sort().map((text: string) => tagItem(text))}
         </VerticalTimelineElement>
     );
 };
