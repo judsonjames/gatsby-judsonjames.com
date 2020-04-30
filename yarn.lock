@@ -1141,6 +1141,13 @@
   dependencies:
     "@types/react" "*"
 
+"@types/react-vertical-timeline-component@^2.5.0":
+  version "2.5.0"
+  resolved "https://registry.yarnpkg.com/@types/react-vertical-timeline-component/-/react-vertical-timeline-component-2.5.0.tgz#e7f6a2936e89704b7fb6293a9c05478a0fb15525"
+  integrity sha512-sHLpl4U/3GsoJ3QobOqX9eJ4CCEZqzEO4cZa3wk1B9/xXV8LyyxxWuIalI25ISbThCkMUQ+nXz2gErE2KfoeAw==
+  dependencies:
+    "@types/react" "*"
+
 "@types/react@*":
   version "16.9.25"
   resolved "https://registry.yarnpkg.com/@types/react/-/react-16.9.25.tgz#6ae2159b40138c792058a23c3c04fd3db49e929e"
@@ -2612,6 +2619,11 @@ class-utils@^0.3.5:
     define-property "^0.2.5"
     isobject "^3.0.0"
     static-extend "^0.1.1"
+
+classnames@^2.2.6:
+  version "2.2.6"
+  resolved "https://registry.yarnpkg.com/classnames/-/classnames-2.2.6.tgz#43935bffdd291f326dad0a205309b38d00f650ce"
+  integrity sha512-JR/iSQOSt+LQIWwrwEzJ9uk0xfN3mTVYMwt1Ir5mUcSN6pU+V4zQFFaJsclJbPuAUQH+yfWef6tm7l1quW3C8Q==
 
 clean-stack@^2.0.0:
   version "2.2.0"
@@ -9305,6 +9317,22 @@ react-side-effect@^1.1.0:
   integrity sha512-v1ht1aHg5k/thv56DRcjw+WtojuuDHFUgGfc+bFHOWsF4ZK6C2V57DO0Or0GPsg6+LSTE0M6Ry/gfzhzSwbc5w==
   dependencies:
     shallowequal "^1.0.1"
+
+react-vertical-timeline-component@^2.6.0:
+  version "2.6.0"
+  resolved "https://registry.yarnpkg.com/react-vertical-timeline-component/-/react-vertical-timeline-component-2.6.0.tgz#de78646c06891a21e45d7eeabc0e03ea7a2d9910"
+  integrity sha512-bTjKDqmy/HYxSkf/k2lg9MidV+4n0Itdz6V77NKULCCeHx73C8O+JOlwxOD5WtEXk6w9SWG/PeVpigWZ0jkAYg==
+  dependencies:
+    classnames "^2.2.6"
+    prop-types "^15.7.2"
+    react-visibility-sensor "^5.1.1"
+
+react-visibility-sensor@^5.1.1:
+  version "5.1.1"
+  resolved "https://registry.yarnpkg.com/react-visibility-sensor/-/react-visibility-sensor-5.1.1.tgz#5238380960d3a0b2be0b7faddff38541e337f5a9"
+  integrity sha512-cTUHqIK+zDYpeK19rzW6zF9YfT4486TIgizZW53wEZ+/GPBbK7cNS0EHyJVyHYacwFEvvHLEKfgJndbemWhB/w==
+  dependencies:
+    prop-types "^15.7.2"
 
 react@^16.6.1, react@^16.8.0, react@^16.8.6:
   version "16.13.1"

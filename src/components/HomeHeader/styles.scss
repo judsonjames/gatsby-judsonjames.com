@@ -4,7 +4,7 @@
 .home-header {
   $padding-top: 12.5vh;
   min-height: $site-height-min - $padding-top;
-  background-color: $blue-sky-background;
+  background-color: $blue-dodger;
   padding-top: $padding-top;
 
   .home-header__name {
@@ -31,7 +31,7 @@
 
   .home-header__profile-pic {
     @extend .__centered;
-    $animation: margin-top 0.5s linear;
+    //$animation: margin-top 0.5s linear;
 
     border: 3px solid $white-text;
     border-radius: 50%;
