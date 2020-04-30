@@ -16,8 +16,6 @@ interface IPath {
     path: string;
 }
 
-
-
 const validPaths: IPath[] = [
     {
         icon: <Home className={"header__nav-icon"}/>,

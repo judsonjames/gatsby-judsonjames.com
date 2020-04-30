@@ -4,6 +4,7 @@ import "react-vertical-timeline-component/style.min.css";
 import Code from "../../../static/svg/code.svg";
 import School from "../../../static/svg/school.svg";
 import Work from "../../../static/svg/work.svg";
+import "./styles.scss";
 
 /**
  * Shared Props for all Timeline Elements
@@ -17,10 +18,12 @@ export interface ItemProps {
 }
 
 const tagItem = (text: string): JSX.Element => (
-    <div>
+    <span className={"tag-item"}>
         {text}
-    </div>
+    </span>
 );
+
+const iconColor: string = "rgba(255, 255, 255, 0.8)";
 
 /**
  * Timeline Element Item used to represent held Employment
@@ -28,19 +31,23 @@ const tagItem = (text: string): JSX.Element => (
  * @constructor
  */
 export const WorkItem = (props: ItemProps): JSX.Element => {
+    const backgroundColor: string = "rgba(29, 47, 111, 0.85)";
+    const iconBackgroundColor: string = "rgba(29, 47, 111, 1)";
     return (
         <VerticalTimelineElement
             className="vertical-timeline-element--work"
-            contentStyle={{ background: "rgb(33, 150, 243)", color: "#fff" }}
-            contentArrowStyle={{ borderRight: "7px solid  rgb(33, 150, 243)" }}
+            contentStyle={{ background: backgroundColor, color: iconColor, fontFamily: "Verdana" }}
+            contentArrowStyle={{ borderRight: `10px solid ${backgroundColor}` }}
             date={props.dates}
-            iconStyle={{ background: "rgb(33, 150, 243)", color: "#fff" }}
-            icon={<Work/>}
+            iconStyle={{ background: iconBackgroundColor, fill: "#000" }}
+            icon={<Work className={"timeline__icon"}/>}
         >
-            <h3 className={"vertical-timeline-element-title"}>{props.title}</h3>
-            <h4 className={"vertical-timeline-element-subtitle"}>{props.subtitle}</h4>
-            <p>{props.description}</p>
-            {props.tags && props.tags.length && props.tags.sort().map((text: string) => tagItem(text))}
+            <h3 className={"vertical-timeline-element-title timeline__text"}>{props.title}</h3>
+            <h4 className={"vertical-timeline-element-subtitle timeline__text"}>{props.subtitle}</h4>
+            <p className={"timeline__text"}>{props.description}</p>
+            <div className={"tags-container"}>
+                {props.tags && props.tags.length && props.tags.sort().map((text: string) => tagItem(text))}
+            </div>
         </VerticalTimelineElement>
     );
 };
@@ -51,19 +58,25 @@ export const WorkItem = (props: ItemProps): JSX.Element => {
  * @constructor
  */
 export const EducationItem = (props: ItemProps): JSX.Element => {
+    const backgroundColor: string = "rgba(130, 9, 51, 0.8)";
+    const iconBackgroundColor: string = "rgba(139, 9, 51, 1)";
     return (
         <VerticalTimelineElement
             className="vertical-timeline-element--education"
-            contentStyle={{ background: "rgb(33, 150, 243)", color: "#fff" }}
-            contentArrowStyle={{ borderRight: "7px solid  rgb(33, 150, 243)" }}
+            contentStyle={{ background: backgroundColor, color: iconColor, fontFamily: "Verdana" }}
+            contentArrowStyle={{ borderRight: `10px solid ${backgroundColor}` }}
             date={props.dates}
-            iconStyle={{ background: "rgb(33, 150, 243)", color: "#fff" }}
-            icon={<School/>}
+            dateClassName={"timeline__text"}
+            iconStyle={{ background: iconBackgroundColor, color: "rgba(255, 255, 255, 0.8)" }}
+            icon={<School className={"timeline__icon"}/>}
+            style={{color: "white"}}
         >
             <h3 className={"vertical-timeline-element-title"}>{props.title}</h3>
             <h4 className={"vertical-timeline-element-subtitle"}>{props.subtitle}</h4>
             <p>{props.description}</p>
-            {props.tags && props.tags.length && props.tags.sort().map((text: string) => tagItem(text))}
+            <div className={"tags-container"}>
+                {props.tags && props.tags.length && props.tags.sort().map((text: string) => tagItem(text))}
+            </div>
         </VerticalTimelineElement>
     );
 };
@@ -74,19 +87,23 @@ export const EducationItem = (props: ItemProps): JSX.Element => {
  * @constructor
  */
 export const OpenSourceItem = (props: ItemProps): JSX.Element => {
+    const backgroundColor: string = "rgba(17, 75, 95, 0.85)";
+    const iconBackgroundColor: string = "rgba(17, 75, 95, 1)";
     return (
         <VerticalTimelineElement
             className="vertical-timeline-element--work"
-            contentStyle={{ background: "rgb(33, 150, 243)", color: "#fff" }}
-            contentArrowStyle={{ borderRight: "7px solid  rgb(33, 150, 243)" }}
+            contentStyle={{ background: backgroundColor, color: iconColor, fontFamily: "Verdana" }}
+            contentArrowStyle={{ borderRight: `10px solid ${backgroundColor}` }}
             date={props.dates}
-            iconStyle={{ background: "rgb(33, 150, 243)", color: "#fff" }}
-            icon={<Code/>}
+            iconStyle={{ background: iconBackgroundColor, color: iconBackgroundColor }}
+            icon={<Code className={"timeline__icon"}/>}
         >
             <h3 className={"vertical-timeline-element-title"}>{props.title}</h3>
             <h4 className={"vertical-timeline-element-subtitle"}>{props.subtitle}</h4>
             <p>{props.description}</p>
-            {props.tags && props.tags.length && props.tags.sort().map((text: string) => tagItem(text))}
+            <div className={"tags-container"}>
+                {props.tags && props.tags.length && props.tags.sort().map((text: string) => tagItem(text))}
+            </div>
         </VerticalTimelineElement>
     );
 };
