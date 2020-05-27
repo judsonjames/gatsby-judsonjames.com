@@ -13,16 +13,15 @@ const Contact = (): JSX.Element => {
     const submit = () => {
         const url: string = "https://getform.io/f/afbddb2e-ea78-48ce-b785-7fd6f834f64d";
         fetch(url, {
-            body: JSON.stringify({
-                email,
-                message,
-                name,
-            }),
+            body: JSON.stringify({ email, message, name }),
             headers: {
-                "Content-Type": "application/json",
+                "Accept": "application/json",
+                "Content-Type": "json",
             },
             method: "POST",
-        }).then(() => alert("success!")).catch(() => alert("fail!"));
+        })
+            .then(() => alert("success!"))
+            .catch(() => alert("fail!"));
     };
 
     return (
@@ -31,15 +30,12 @@ const Contact = (): JSX.Element => {
             description={"Contact Judson for more information."}
             imageRef={"/img/profile_pic.jpg"}
         >
-            <div>
-                Contact Page
-                <form>
-                    <input type={"text"} name={"name"} onInput={handleSetName}/>
-                    <input type={"email"} name={"email"} onInput={handleSetEmail}/>
-                    <input type={"text"} name={"message"} onInput={handleSetMessage}/>
-                    <button onClick={submit}>Send</button>
-                </form>
-            </div>
+            <form>
+                <input type={"text"} name={"name"} onInput={handleSetName}/>
+                <input type={"email"} name={"email"} onInput={handleSetEmail}/>
+                <input type={"text"} name={"message"} onInput={handleSetMessage}/>
+                <button onClick={submit}>Send</button>
+            </form>
         </SiteLayout>
     );
 };
