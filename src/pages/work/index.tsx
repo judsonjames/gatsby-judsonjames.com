@@ -43,6 +43,7 @@ const Work = (): JSX.Element => {
                         tags={[
                             "React.js", "Gatsby.js", "AWS", "Hug", "TypeScript", "Google Docs API", "Python", "HIPAA",
                             "Docker", "MaterialUI", "ElementUI", "MSWord API", "Django", "Vue.js", "Next.js",
+                            "Bootstrap",
                         ]}
                     />
                     <EducationItem
@@ -58,7 +59,7 @@ const Work = (): JSX.Element => {
                             "Django as a server framework/static site server, and React with SSR through Django."}
                         dates={"December 2018 - June 2019"}
                         tags={[
-                            "Django", "Docker", "Nginx", "Postgres", "AWS", "jQuery", "AJAX", "React.js",
+                            "Django", "Docker", "Nginx", "Postgres", "AWS", "jQuery", "AJAX", "React.js", "Bootstrap",
                         ]}
                     />
                     <EducationItem
@@ -70,7 +71,7 @@ const Work = (): JSX.Element => {
                         dates={"September 2018 - May 2019"}
                         tags={[
                             "Django", "Angular", "Postgres", "Python", "JavaScript", "Docker", "Nginx", "DigitalOcean",
-                            "Google Calendar API", "OAuth",
+                            "Google Calendar API", "OAuth", "Bootstrap",
                         ]}
                     />
                     <WorkItem

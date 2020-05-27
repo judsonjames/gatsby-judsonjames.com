@@ -21,5 +21,6 @@ module.exports = {
         policy: [{ userAgent: '*', allow: '/'}]
       },
     },
+    `gatsby-plugin-preload-link-crossorigin`,
   ],
 };

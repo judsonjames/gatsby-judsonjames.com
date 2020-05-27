@@ -1,7 +1,11 @@
 import React from "react";
+// @ts-ignore
 import Blog from "../../../../static/svg/book.svg";
+// @ts-ignore
 import Email from "../../../../static/svg/email.svg";
+// @ts-ignore
 import Home from "../../../../static/svg/home.svg";
+// @ts-ignore
 import Work from "../../../../static/svg/work.svg";
 import "./styles.scss";
 
@@ -14,6 +18,7 @@ interface IMenuItemProps {
 interface IPath {
     icon: JSX.Element;
     path: string;
+    title?: string;
 }
 
 const validPaths: IPath[] = [

@@ -1,0 +1,7 @@
+$breakpoint-desktop: 1200px;
+
+@mixin desktop-view {
+  @media screen and (min-width: $breakpoint-desktop){
+    @content
+  }
+}
