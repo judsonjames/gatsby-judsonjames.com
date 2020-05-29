@@ -26,8 +26,20 @@ const ContactForm = (): JSX.Element => {
       .required("Required"),
   });
 
-  const contactFormSubmit = () => {
-    alert("Success!");
+  const contactFormSubmit = (values, actions) => {
+    const encode = (data: any) => Object.keys(data)
+        .map((key: string) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+        .join("&");
+    fetch("/", {
+      body: encode({ "form-name": "contact-form", ...values}),
+      headers: { "Content-Type": "application/x-www-form-urlencoded"},
+      method: "POST",
+    }).then(() => {
+        alert("Good");
+        actions.resetForm();
+      }).catch(() => {
+        alert("Error");
+      });
   };
 
   return (
