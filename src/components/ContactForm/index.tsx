@@ -45,13 +45,7 @@ const ContactForm = (): JSX.Element => {
   return (
     <div>
       <Formik
-        initialValues={{
-          "bot-field": "",
-          email,
-          "form-name": "contact-form",
-          message,
-          name,
-        }}
+        initialValues={{ email, message, name }}
         onSubmit={contactFormSubmit}
         validationSchema={contactFormSchema}
       >
