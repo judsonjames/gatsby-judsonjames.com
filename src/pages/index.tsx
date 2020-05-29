@@ -29,16 +29,13 @@ import SiteLayout from "../components/SiteLayout";
 const IndexPage = (): JSX.Element => {
   return (
     <SiteLayout
-        title={"Judson James | Home"}
-        description={"A Full Stack Developer who loves to work with new and interesting projects."}
-        imageRef={"/img/profile_pic.jpg"}
-        hideHeader={false}
-        hideFooter={true}
+      title={"Judson James | Home"}
+      description={"A Full Stack Developer who loves to work with new and interesting projects."}
+      imageRef={"/img/profile_pic.jpg"}
+      hideHeader={false}
+      hideFooter={true}
     >
-        <div>
-            <HomeHeader/>
-            <AboutSection/>
-        </div>
+      <HomeHeader/>
     </SiteLayout>
   );
 };

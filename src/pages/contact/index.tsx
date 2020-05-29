@@ -1,72 +1,29 @@
-import {ErrorMessage, Field, Form, Formik} from "formik";
-import React, {FormEvent, useState} from "react";
-import * as Yup from "yup";
+import React from "react";
+import ContactForm from "../../components/ContactForm";
 import SiteLayout from "../../components/SiteLayout";
+import "./styles.scss";
 
 const Contact = (): JSX.Element => {
-    const [email, setEmail] = useState<string>("");
-    const [name, setName] = useState<string>("");
-    const [message, setMessage] = useState<string>("");
-
-    const handleSetName = (e: FormEvent<HTMLInputElement>) => setName(e.currentTarget.value);
-    const handleSetEmail = (e: FormEvent<HTMLInputElement>) => setEmail(e.currentTarget.value);
-    const handleSetMessage = (e: FormEvent<HTMLInputElement>) => setMessage(e.currentTarget.value);
-
-    const contactFormSchema = Yup.object().shape({
-        email: Yup.string()
-            .email("Invalid email")
-            .required("Required"),
-        message: Yup.string()
-            .min(2, "Message Min Length: 2")
-            .max(250, "Message Max Length: 250")
-            .required("Required"),
-        name: Yup.string()
-            .min(2, "Name Min Length: 2")
-            .max(50, "Name Max length: 50")
-            .required("Required"),
-    });
-
-    const contactFormSubmit = () => {
-        alert("Success!");
-    };
-
-    return (
-        <SiteLayout
-            title={"Judson James | Contact"}
-            description={"Contact Judson for more information."}
-            imageRef={"/img/profile_pic.jpg"}
-        >
-            <div>
-                <Formik
-                    initialValues={{
-                        "bot-field": "",
-                        "form-name": "contact-form",
-                        email, message, name,
-                    }}
-                    onSubmit={contactFormSubmit}
-                    validationSchema={contactFormSchema}
-                >
-                    <Form
-                        data-netlify={"true"}
-                        data-netlify-honeypot={"bot-field"}
-                        data-netlify-recaptcha={"true"}
-                        name={"contact-form"}
-                        noValidate={true}
-                    >
-                        <Field type={"hidden"} name={"bot-field"}/>
-                        <Field type={"hidden"} name={"form-name"}/>
-                        <Field type={"text"} name={"name"}/>
-                        <ErrorMessage name={"name"}/>
-                        <Field type={"email"} name={"email"}/>
-                        <ErrorMessage name={"email"}/>
-                        <Field type={"text"} name={"message"}/>
-                        <ErrorMessage name={"message"}/>
-                        <button type={"submit"}>Submit</button>
-                    </Form>
-                </Formik>
-            </div>
-        </SiteLayout>
-    );
+  return (
+    <SiteLayout
+      title={"Judson James | Contact"}
+      description={"Contact Judson for more information."}
+      imageRef={"/img/profile_pic.jpg"}
+      hideFooter={true}
+    >
+      <div id={"ContactPage"}>
+        <h1>Contact Me!</h1>
+        <p>
+          I'm actively working on new and exciting projects, but I'm always willing to hear what others are
+          working on and need help completing. This can be a web app, a server application, or general applications.
+          <br/>
+          If you'd like to contact me, feel free to enter your contact information and a semi-brief
+          description of what you're working on. I'll get back to you ASAP!
+        </p>
+        <ContactForm/>
+      </div>
+    </SiteLayout>
+  );
 };
 
 export default Contact;

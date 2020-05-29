@@ -1,7 +1,13 @@
-$breakpoint-desktop: 1200px;
+$breakpoint-mobile: 700px;
+$breakpoint-desktop: 1170px;
 
 @mixin desktop-view {
   @media screen and (min-width: $breakpoint-desktop){
+    @content
+  }
+}
+@mixin mobile-view {
+  @media screen and (max-width: $breakpoint-mobile) {
     @content
   }
 }
