@@ -56,23 +56,28 @@ const ContactForm = (): JSX.Element => {
         validationSchema={contactFormSchema}
       >
         {({errors, touched}) => (
-          <div id={"ContactFields"}>
-            <label className={errors.name && touched.name ? "form__error" : undefined}>
-              Your name {errors.name && touched.name ? ` | ${errors.name}` : ""}
-            </label>
-            <Field type={"text"} name={"name"} className={"form__input"}/>
+          <Form
+            name={"contact-form"}
+            noValidate={true}
+          >
+            <div id={"ContactFields"}>
+              <label className={errors.name && touched.name ? "form__error" : undefined}>
+                Your name {errors.name && touched.name ? ` | ${errors.name}` : ""}
+              </label>
+              <Field type={"text"} name={"name"} className={"form__input"}/>
 
-            <label className={errors.email && touched.email ? "form__error" : undefined}>
-              Your Email {errors.email && touched.email ? ` | ${errors.email}` : ""}
-            </label>
-            <Field type={"email"} name={"email"} className={"form__input"}/>
+              <label className={errors.email && touched.email ? "form__error" : undefined}>
+                Your Email {errors.email && touched.email ? ` | ${errors.email}` : ""}
+              </label>
+              <Field type={"email"} name={"email"} className={"form__input"}/>
 
-            <label className={errors.message && touched.message ? "form__error" : undefined}>
-              A Friendly Message {errors.message && touched.message ? ` | ${errors.message}` : ""}
-            </label>
-            <Field as={"textarea"} name={"message"} className={"form__input message"}/>
-            <button type={"submit"}>Submit</button>
-          </div>
+              <label className={errors.message && touched.message ? "form__error" : undefined}>
+                A Friendly Message {errors.message && touched.message ? ` | ${errors.message}` : ""}
+              </label>
+              <Field as={"textarea"} name={"message"} className={"form__input message"}/>
+              <button type={"submit"}>Submit</button>
+            </div>
+          </Form>
         )}
       </Formik>
     </div>
