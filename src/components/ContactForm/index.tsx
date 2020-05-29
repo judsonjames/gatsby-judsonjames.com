@@ -30,9 +30,9 @@ const ContactForm = (): JSX.Element => {
     const encode = (data: any) => Object.keys(data)
         .map((key: string) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
         .join("&");
-    fetch("/", {
-      body: encode({ "form-name": "contact-form", ...values}),
-      headers: { "Content-Type": "application/x-www-form-urlencoded"},
+    fetch("https://getform.io/f/afbddb2e-ea78-48ce-b785-7fd6f834f64d", {
+      body: encode(values),
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
       method: "POST",
     }).then(() => {
         alert("Good");
@@ -67,7 +67,7 @@ const ContactForm = (): JSX.Element => {
             <Field type={"hidden"} name={"form-name"}/>
             <div id={"ContactFields"}>
               <label className={errors.name && touched.name ? "form__error" : undefined}>
-              Your name {errors.name && touched.name ? ` | ${errors.name}` : ""}
+                Your name {errors.name && touched.name ? ` | ${errors.name}` : ""}
               </label>
               <Field type={"text"} name={"name"} className={"form__input"}/>
 
