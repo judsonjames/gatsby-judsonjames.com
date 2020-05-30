@@ -1,3 +1,16 @@
+require("dotenv").config({
+  path: `.env`,
+});
+
+const contentfulConfig = {
+  spaceId: process.env.CONTENTFUL_SPACE_ID,
+  accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+};
+
+if (!contentfulConfig.spaceId || !contentfulConfig.accessToken) {
+  throw new Error("Contentful not configured correctly!");
+}
+
 module.exports = {
   siteMetadata: {
     name: `Judson James Personal Portfolio`,
@@ -5,6 +18,7 @@ module.exports = {
     siteUrl: `https://focused-lamarr-93f88f.netlify.com/`
   },  
   plugins: [
+    `gatsby-plugin-preload-link-crossorigin`,
     `gatsby-plugin-sass`,
     `gatsby-plugin-typescript`,
     `gatsby-plugin-tslint`,
@@ -21,6 +35,9 @@ module.exports = {
         policy: [{ userAgent: '*', allow: '/'}]
       },
     },
-    `gatsby-plugin-preload-link-crossorigin`,
+    {
+      resolve: `gatsby-source-contentful`,
+      options: contentfulConfig,
+    },
   ],
 };

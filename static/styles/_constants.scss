@@ -2,17 +2,7 @@
   * This file serves for all global styles in the Website
  */
 
-// Browser reset
-html, body {
-  margin: 0;
-  padding: 0;
-  //background-color: whitesmoke;
 
-  scrollbar-width: none;
-}
-::-webkit-scrollbar {
-  width: 0;
-}
 
 $site-width: 100vw;
 $site-height-min: 100vh;
@@ -30,6 +20,13 @@ $silver-background: rgba(224,224,224 ,1);
 //$silver-background: rgba(189,195,199 ,1);
 $white-text: rgba(255, 255, 255, 0.9);
 
-// Breakpoints
-$iPhone6-width: 736px;
-$iPad-width: 1024px;
+// Browser reset
+html, body {
+  margin: 0;
+  padding: 0;
+
+  scrollbar-width: none;
+}
+::-webkit-scrollbar {
+  width: 0;
+}

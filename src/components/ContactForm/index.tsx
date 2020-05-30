@@ -30,9 +30,12 @@ const ContactForm = (): JSX.Element => {
     const encode = (data: any) => Object.keys(data)
         .map((key: string) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
         .join("&");
-    fetch("https://getform.io/f/afbddb2e-ea78-48ce-b785-7fd6f834f64d", {
+    fetch(`${process.env.GETFORM_URL}`, {
       body: encode(values),
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      headers: {
+        "Accept": "application/json",
+        "Content-Type": "application/x-www-form-urlencoded",
+      },
       method: "POST",
     }).then(() => {
         alert("Good");
