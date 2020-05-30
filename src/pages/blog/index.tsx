@@ -37,7 +37,6 @@ const Blog: ComponentType<IPageProps> = (props: IPageProps): JSX.Element => {
       title={"Judson James | Blog"}
       description={"The coolest blog you'll ever get to read"}
       imageRef={""}
-      hideFooter={true}
     >
       <div id={"BlogEntriesList"}>
         {edges.map(({ node }, i: number) => (

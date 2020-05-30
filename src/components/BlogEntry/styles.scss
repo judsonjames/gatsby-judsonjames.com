@@ -2,7 +2,6 @@
 
 div.blog-entry {
   color: $white-text;
-  font-family: $font-family;
   font-size: 1.25rem;
   margin: 0 auto;
   min-height: 200px;
@@ -53,7 +52,6 @@ div.blog-entry {
       border: 3px solid $white-text;
       border-radius: 15px;
       padding: 10px 10px;
-
 
       &:not(:first-child) {
         margin: 0 10px;

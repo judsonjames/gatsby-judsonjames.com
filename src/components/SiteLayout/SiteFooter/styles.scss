@@ -1,0 +1,17 @@
+@import "static/styles/constants";
+
+footer#SiteFooter {
+  border-top: 3px solid $white-text;
+  background-color: $beige-background;
+  color: $white-text;
+  display: flex;
+  justify-content: space-evenly;
+  height: 40px;
+
+  div.github-link {
+    margin: auto auto;
+    a {
+      color: $white-text;
+    }
+  }
+}

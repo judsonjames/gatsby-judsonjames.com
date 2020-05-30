@@ -21,7 +21,6 @@ const BlogEntry: ComponentType<IBlogEntryProps> = (props: IBlogEntryProps): JSX.
     <div className={"blog-entry"}>
       <h1>{props.title}</h1>
       <p className={"date-published"}>{props.published}</p>
-      {/*<p className={"blog-description"}>{props.description}</p>*/}
       <ReactMarkdown source={props.description} className={"blog-markdown"}/>
       <div className={"blog-tags__container"}>
         {props.tags.map((tag: string, i: number) => (
