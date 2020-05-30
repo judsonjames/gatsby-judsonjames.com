@@ -11,3 +11,9 @@ $breakpoint-desktop: 1170px;
     @content
   }
 }
+
+@mixin tablet-view {
+  @media screen and (min-width: $breakpoint-mobile) and (max-width: $breakpoint-desktop) {
+    @content
+  }
+}

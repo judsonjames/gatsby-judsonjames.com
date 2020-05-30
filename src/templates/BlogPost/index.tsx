@@ -18,7 +18,7 @@ export const query = graphql`
                 description
             }
             heroImage {
-                fluid(maxWidth: 350, maxHeight: 196, resizingBehavior: SCALE) {
+                fluid(resizingBehavior: SCALE) {
                     src
                 }
             }

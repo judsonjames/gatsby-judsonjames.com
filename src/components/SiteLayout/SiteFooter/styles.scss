@@ -1,4 +1,5 @@
 @import "static/styles/constants";
+@import "static/styles/breakpoints";
 
 footer#SiteFooter {
   border-top: 3px solid $white-text;
@@ -7,6 +8,22 @@ footer#SiteFooter {
   display: flex;
   justify-content: space-evenly;
   height: 40px;
+
+  @include mobile-view {
+    display: none;
+  }
+
+  div.general-links {
+    margin: auto auto;
+
+    span:not(:last-child):after {
+      content: " | ";
+    }
+
+    a {
+      color: $white-text;
+    }
+  }
 
   div.github-link {
     margin: auto auto;

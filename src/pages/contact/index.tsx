@@ -9,7 +9,6 @@ const Contact = (): JSX.Element => {
       title={"Judson James | Contact"}
       description={"Contact Judson for more information."}
       imageRef={"/img/profile_pic.jpg"}
-      hideFooter={true}
     >
       <div id={"ContactPage"}>
         <h1>Contact Me!</h1>
