@@ -57,16 +57,16 @@ const SiteHeader = (): JSX.Element => {
    * @param {string} slug
    * @returns isActiveTab
    */
-  const checkActiveTab = (slug: string): boolean => {
-    const url: string = !!window ? window.location.href : "";
-    return url.includes(slug);
-  };
+  // const checkActiveTab = (slug: string): boolean => {
+  //   const url: string = !!window ? window.location.href : "";
+  //   return url.includes(slug);
+  // };
 
   return (
     <div id={"site-header"}>
       {validPaths.map((path: IPath, i: number) => {
         return (
-          <a key={i} href={path.slug.toLowerCase()} className={checkActiveTab(path.slug) ? "active" : undefined}>
+          <a key={i} href={path.slug.toLowerCase()}>
             <div key={i}>
               {path.icon}
               <p key={i}>
