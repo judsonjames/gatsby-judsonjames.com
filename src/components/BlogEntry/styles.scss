@@ -9,6 +9,10 @@ div.blog-entry {
   padding: 50px 0 25px;
   width: 75%;
 
+  @include large-desktop-view {
+    width: 65%;
+  }
+
   @include mobile-view {
     width: 90%;
   }

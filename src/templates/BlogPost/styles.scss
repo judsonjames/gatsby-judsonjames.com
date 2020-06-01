@@ -52,6 +52,14 @@ div#BlogPostContainer {
       padding: 25px;
       width: 75%;
 
+      @include large-desktop-view {
+        width: 60%;
+      }
+
+      @include tablet-view {
+        width: 90%;
+      }
+
       @include mobile-view {
         border-radius: 0;
         font-size: 0.9rem;

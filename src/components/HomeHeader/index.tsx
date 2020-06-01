@@ -1,13 +1,16 @@
+import Img from "gatsby-image";
 import scrollTo from "gatsby-plugin-smoothscroll";
 import React from "react";
 import "./styles.scss";
+
+
 
 const HomeHeader = (): JSX.Element => {
   const scrollToAboutSection = () => scrollTo("#about");
 
   return (
     <div id={"HomeHeader"}>
-      <img className={"home-header__profile-pic"} src={"/img/profile_pic.jpg"} alt={"profile_picture"}/>
+      <Img className={"home-header__profile-pic"} src={"/img/profile_pic.jpg"} alt={"profile_picture"}/>
       <h1 className={"home-header__name"}>Judson James</h1>
       <h3 className={"home-header__title"}>Full Stack Engineer</h3>
       <div className={"home-header__buttons"}>

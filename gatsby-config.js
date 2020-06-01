@@ -28,6 +28,12 @@ module.exports = {
     `gatsby-plugin-react-svg`,
     `gatsby-plugin-smoothscroll`,
     {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: process.env.GOOGLE_ANALYTICS
+      }
+    },
+    {
       resolve: `gatsby-plugin-robots-txt`,
       options: {
         host: `https://focused-lamarr-93f88f.netlify.com/`,
@@ -36,8 +42,27 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-images-contentful`,
+            options: {
+              maxWidth: 600,
+            }
+          }
+        ]
+      }
+    },
+    {
       resolve: `gatsby-source-contentful`,
       options: contentfulConfig,
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/static/`,
+      }
+    }
   ],
 };
