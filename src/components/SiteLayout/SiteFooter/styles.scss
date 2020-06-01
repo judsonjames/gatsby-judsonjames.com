@@ -9,10 +9,6 @@ footer#SiteFooter {
   justify-content: space-evenly;
   height: 40px;
 
-  @include mobile-view {
-    display: none;
-  }
-
   div.general-links {
     margin: auto auto;
 
