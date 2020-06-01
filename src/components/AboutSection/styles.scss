@@ -6,7 +6,7 @@
   background-color: $blue-dodger;
   color: $white-text;
   min-height: 100vh;
-  padding: 25px 0 0;
+  padding: 25px 0;
 
   .about__inner-div {
     background-color: $white-background;
@@ -20,11 +20,15 @@
       width: 90%;
     }
 
+    @include large-desktop-view {
+      width: 50%;
+    }
+
     p {
       padding: 0 5vw;
-      font-size: 1.4rem;
+      font-size: 1.3rem;
       font-weight: 400;
-      line-height: 1.25;
+      line-height: 1.4;
 
       @include mobile-view {
         font-size: 1rem;
@@ -32,11 +36,9 @@
       }
     }
 
-    h1 {
+    h3 {
       font-weight: 700;
-      font-size: 5rem;
-      padding-left: 5vw;
-      text-decoration: underline solid;
+      line-height: 1.5;
     }
   }
 }

@@ -2,11 +2,12 @@
 
 .work-page {
   background-color: $blue-dodger;
-  padding: 25px 0;
+  padding: 25px 0 0;
 
   &__description {
     background-color: $white-background;
     border-bottom: 3px solid $white-text;
+    border-radius: 5px;
     line-height: 1.5;
     margin: 0 auto;
     padding: 25px;

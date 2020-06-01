@@ -1,5 +1,5 @@
 require("dotenv").config({
-  path: `.env`,
+  path: `.env.production`,
 });
 
 const contentfulConfig = {
@@ -75,6 +75,12 @@ module.exports = {
       options: {
         path: `${__dirname}/static/`,
       }
-    }
+    },
+    {
+      resolve: `gatsby-plugin-env-variables`,
+      options: {
+        whitelist: ["GETFORM_URL"]
+      },
+    },
   ],
 };

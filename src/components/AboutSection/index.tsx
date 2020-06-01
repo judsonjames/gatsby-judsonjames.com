@@ -5,6 +5,10 @@ const AboutSection = (): JSX.Element => {
   return (
     <div className={"home__about-section"}>
       <div className={"about__inner-div"}>
+        <h3>
+          There's a lot of information to know about me, so to help, I wanted to answer a couple of FAQs
+          to help you understand me.
+        </h3>
         <h3 id={"about"}>Who am I?</h3>
         <p>
           My name is Judson, and I'm a Full Stack Software Engineer specializing in Web Applications.
@@ -20,6 +24,23 @@ const AboutSection = (): JSX.Element => {
           Most of my Frontend projects use ReactDOM and frameworks that use the ReactDOM like Create React App, Next,
           and Gatsby <a href={"https://github.com/judsonjames/gatsby-judsonjames.com"}>(like this site)</a>. Sometimes
           I'll dabble with Vue if the project is already using it.
+        </p>
+        <p>
+          Some Example solutions would be:
+          <ul>
+            <li>
+              Gatsby + Netlify + Contentful CMS
+            </li>
+            <li>
+              Next + Netlify
+            </li>
+            <li>
+              MERN
+            </li>
+            <li>
+              React + Python/Rust backend implementation + AWS/Heroku
+            </li>
+          </ul>
         </p>
         <p>
           For backend, I'm experienced with both Monolithic frameworks like Django, but also more light-weight packages
@@ -38,7 +59,7 @@ const AboutSection = (): JSX.Element => {
           I play JRPGS/casual games and stream on Twitch for fun.
         </p>
         <p>
-          I also enjoy cooking, play with the latest tech, and I'm currently teaching myself Japanese.
+          I also enjoy cooking, playing with the latest tech, and I'm currently teaching myself Japanese.
         </p>
       </div>
     </div>

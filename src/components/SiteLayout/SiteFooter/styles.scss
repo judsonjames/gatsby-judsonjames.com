@@ -7,17 +7,26 @@ footer#SiteFooter {
   color: $white-text;
   display: flex;
   justify-content: space-evenly;
-  height: 40px;
+  min-height: 40px;
+
+  @include mobile-view {
+    flex-direction: column;
+    padding: 10px 0;
+  }
 
   div.general-links {
     margin: auto auto;
+
+    a {
+      color: $white-text;
+    }
 
     span:not(:last-child):after {
       content: " | ";
     }
 
-    a {
-      color: $white-text;
+    @include mobile-view {
+      padding-bottom: 10px;
     }
   }
 
