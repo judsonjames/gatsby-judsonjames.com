@@ -13,9 +13,8 @@ const Work = (): JSX.Element => {
   return (
     <SiteLayout
       title={"Judson James | Work"}
-      description={""}
+      description={"A Timeline of my Work History, as well as a description of what I use in my work."}
       imageRef={"/img/profile_pic"}
-      hideFooter={true}
     >
       <div className={"work-page"}>
         <div className={"work-page__description"}>

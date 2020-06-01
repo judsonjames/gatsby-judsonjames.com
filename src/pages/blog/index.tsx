@@ -35,8 +35,8 @@ const Blog: ComponentType<IPageProps> = (props: IPageProps): JSX.Element => {
   return (
     <SiteLayout
       title={"Judson James | Blog"}
-      description={"The coolest blog you'll ever get to read"}
-      imageRef={""}
+      description={"An Educational Blog describing my experiences as a developer, and help others learn."}
+      imageRef={"/img/profile_pic.jpg"}
     >
       <div id={"BlogEntriesList"}>
         {edges.map(({ node }, i: number) => (
