@@ -19,56 +19,54 @@ interface IMenuItemProps {
 
 interface IPath {
   icon: JSX.Element;
-  path: string;
+  slug: string;
   title: string;
 }
 
 const validPaths: IPath[] = [
   {
     icon: <Home className={"header__nav-icon"}/>,
-    path: "/",
+    slug: "/",
     title: "Home",
   },
   {
     icon: <Face className={"header__nav-icon"}/>,
-    path: "/about-me",
+    slug: "/about-me",
     title: "About Me",
   },
   {
     icon: <Work className={"header__nav-icon"}/>,
-    path: "/work",
+    slug: "/work",
     title: "Work",
   },
   {
     icon: <Blog className={"header__nav-icon"}/>,
-    path: "/blog",
+    slug: "/blog",
     title: "Blog",
   },
   {
     icon: <Email className={"header__nav-icon"}/>,
-    path: "/contact",
+    slug: "/contact",
     title: "Contact",
   },
 ];
 
 const SiteHeader = (): JSX.Element => {
-  const [activeTab, setActiveTab] = React.useState<number>(0);
-
-  React.useEffect(() => {
-    const url: string = !!window ? window.location.href : "";
-    validPaths.forEach((path: IPath, i: number) => {
-      const searchTerm: string = path.path.replace("/", "");
-      if (url.split("/").includes(searchTerm)) {
-        setActiveTab(i);
-      }
-    });
-  }, []);
+  /**
+   * Helper function to check for active tab status
+   * @param {string} slug
+   * @returns isActiveTab
+   */
+  // const checkActiveTab = (slug: string): boolean => {
+  //   const url: string = !!window ? window.location.href : "";
+  //   return url.includes(slug);
+  // };
 
   return (
     <div id={"site-header"}>
       {validPaths.map((path: IPath, i: number) => {
         return (
-          <a key={i} href={path.path.toLowerCase()}>
+          <a key={i} href={path.slug.toLowerCase()}>
             <div key={i}>
               {path.icon}
               <p key={i}>

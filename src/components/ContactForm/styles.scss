@@ -4,14 +4,14 @@
 
 $shadow-transition: 0.25s box-shadow;
 
+
 #ContactFields {
-  color: $white-text;
   display: flex;
   flex-direction: column;
-  font-family: Verdana, sans-serif;
   font-size: 1.25rem;
   font-weight: 400;
   margin: 0 auto;
+  position: relative;
   width: 75%;
 
   @include desktop-view {
@@ -27,7 +27,6 @@ $shadow-transition: 0.25s box-shadow;
     border-color: $white-text;
     border-radius: 4px;
     color: $white-text;
-    font-family: Verdana, sans-serif;
     font-weight: 600;
     font-size: 1.25rem;
     margin: 100px auto 0;
@@ -36,7 +35,7 @@ $shadow-transition: 0.25s box-shadow;
     width: 50%;
 
     &:hover {
-      background-color: $white-text;
+      background-color: $white-background;
       color: $blue-dodger;
       cursor: pointer;
       transition: 0.25s background-color, color;
@@ -47,7 +46,6 @@ $shadow-transition: 0.25s box-shadow;
     $color-transition: 0.25s color;
     &__input {
       border-radius: 4px;
-      font-family: Verdana, sans-serif;
       padding: 10px;
       transition: $shadow-transition, $color-transition;
 
@@ -56,7 +54,7 @@ $shadow-transition: 0.25s box-shadow;
       }
 
       &:focus {
-        box-shadow: 0 5px 4px 5px black;
+        box-shadow: 0 5px 4px 5px $white-background;
         transition: $shadow-transition, $color-transition;
       }
     }

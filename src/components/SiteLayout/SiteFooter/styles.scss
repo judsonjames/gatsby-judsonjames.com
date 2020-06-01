@@ -1,0 +1,39 @@
+@import "static/styles/constants";
+@import "static/styles/breakpoints";
+
+footer#SiteFooter {
+  border-top: 3px solid $white-text;
+  background-color: $beige-background;
+  color: $white-text;
+  display: flex;
+  justify-content: space-evenly;
+  min-height: 40px;
+
+  @include mobile-view {
+    flex-direction: column;
+    padding: 10px 0;
+  }
+
+  div.general-links {
+    margin: auto auto;
+
+    a {
+      color: $white-text;
+    }
+
+    span:not(:last-child):after {
+      content: " | ";
+    }
+
+    @include mobile-view {
+      padding-bottom: 10px;
+    }
+  }
+
+  div.github-link {
+    margin: auto auto;
+    a {
+      color: $white-text;
+    }
+  }
+}

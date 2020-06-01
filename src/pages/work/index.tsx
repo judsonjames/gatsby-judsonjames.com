@@ -1,8 +1,8 @@
 import React from "react";
-import {VerticalTimeline} from "react-vertical-timeline-component";
+import { VerticalTimeline } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
 import SiteLayout from "../../components/SiteLayout";
-import {EducationItem, OpenSourceItem, WorkItem} from "../../components/TimelineHelpers";
+import { EducationItem, OpenSourceItem, WorkItem } from "../../components/TimelineHelpers";
 import "./styles.scss";
 
 /**
@@ -13,11 +13,24 @@ const Work = (): JSX.Element => {
   return (
     <SiteLayout
       title={"Judson James | Work"}
-      description={""}
+      description={"A Timeline of my Work History, as well as a description of what I use in my work."}
       imageRef={"/img/profile_pic"}
-      hideFooter={true}
     >
-      <div className={"timeline__container"}>
+      <div className={"work-page"}>
+        <div className={"work-page__description"}>
+          Below is a timeline of my major volunteer projects, jobs, and educational landmarks. Many more projects are
+          available on my GitHub, but to help you get a synopsis of my work experience, the highlights of the
+          timeline are:
+          <ul>
+            <li>I am currently a mid-level developer at 52inc</li>
+            <li>My GitHub is <a href={"https://github.com/judsonjames"} target={"_"}>judsonjames</a></li>
+            <li>I began my career in software engineering since 2017, while in college</li>
+            <li>I graduated from the University of South Carolina in May, 2019</li>
+            <li>My main software languages are JavaScript/TypeScript, Python, and Rust</li>
+            <li>My tech stack ranges depending on the project and what needs to be done</li>
+          </ul>
+
+        </div>
         <VerticalTimeline className={"timeline__component"}>
           <OpenSourceItem
             title={"Programming Mentor"}

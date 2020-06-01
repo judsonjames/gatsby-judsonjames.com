@@ -1,0 +1,83 @@
+@import "static/styles/constants";
+@import "static/styles/breakpoints";
+
+div.blog-entry {
+  color: $white-text;
+  font-size: 1.25rem;
+  margin: 0 auto;
+  min-height: 200px;
+  padding: 50px 0 25px;
+  width: 75%;
+
+  @include large-desktop-view {
+    width: 65%;
+  }
+
+  @include mobile-view {
+    width: 90%;
+  }
+
+  &:not(:last-child) {
+    border-bottom: 3px solid $white-text;
+  }
+
+  h1 {
+    @include mobile-view {
+      font-size: 1.75rem;
+    }
+  }
+
+  p.date-published {
+    font-size: 1.5rem;
+  }
+
+  .blog-markdown {
+    background-color: $white-background;
+    border-radius: 15px;
+    color: black;
+    margin: 10px 0;
+    padding: 10px;
+  }
+
+  div.view-container {
+    // This contains the anchor to the stylized button and nothing else
+    display: flex;
+    justify-content: left;
+    .view-button {
+      &__link {
+        text-decoration: none;
+        width: fit-content;
+      }
+      &__container {
+        background-color: $beige-background;
+        border: 3px solid $white-text;
+        border-radius: 15px;
+        color: $white-text;
+        display: flex;
+        margin: 35px 0;
+        padding: 10px 25px;
+        text-align: center;
+        width: fit-content;
+      }
+    }
+  }
+
+  div.blog-tags {
+    &__container {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: left;
+    }
+    &__item {
+      background-color: gray;
+      border: 3px solid $white-text;
+      border-radius: 15px;
+      padding: 10px 10px;
+
+      &:not(:first-child) {
+        margin: 0 10px;
+      }
+    }
+  }
+}

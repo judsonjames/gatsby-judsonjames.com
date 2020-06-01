@@ -9,3 +9,7 @@ declare module "*.svg" {
   const content: FunctionComponent<SVGAttributes<SVGElement>>;
   export default content;
 }
+
+export interface IPageProps {
+  data: any;
+}

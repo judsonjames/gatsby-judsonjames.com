@@ -1,65 +1,54 @@
 @import "static/styles/constants";
 @import "static/styles/classes";
 
-.home-header {
-  $padding-top: 12.5vh;
-  min-height: $site-height-min - $padding-top;
+#HomeHeader {
+  min-height: 80vh;
   background-color: $blue-dodger;
-  padding-top: $padding-top;
+  padding-top: 12.5vh;
 
-  .home-header__name {
-    @extend .__centered;
-    font-family: Tahoma, sans-serif;
-    color: $white-text;
-    font-size: 3rem;
-    font-weight: bolder;
-    line-height: 1.5;
-    text-align: center;
-    text-rendering: optimizeLegibility;
-  }
+  .home-header {
+    &__name {
+      @extend .__centered;
+      color: $white-text;
+      font-size: 3rem;
+      font-weight: bolder;
+      line-height: 1.75;
+      text-align: center;
+      text-rendering: optimizeLegibility;
+    }
 
-  .home-header__title {
-    @extend .__centered;
-    color: $white-text;
-    font-family: Tahoma, sans-serif;
-    font-size: 1.5rem;
-    font-weight: lighter;
-    line-height: 1.25;
-    text-align: center;
-    text-rendering: optimizeLegibility;
-  }
+    &__title {
+      @extend .__centered;
+      color: $white-text;
+      font-size: 1.5rem;
+      font-weight: lighter;
+      line-height: 1.5;
+      text-align: center;
+      text-rendering: optimizeLegibility;
+    }
 
-  .home-header__profile-pic {
-    @extend .__centered;
-    //$animation: margin-top 0.5s linear;
+    &__profile-pic {
+      @extend .__centered;
+      border: 3px solid $white-text;
+      border-radius: 50%;
+      min-width: 30vw;
+      max-width: 80vw;
+    }
 
-    border: 3px solid $white-text;
-    border-radius: 50%;
+    &__buttons {
+      display: flex;
+      justify-content: center;
+      padding-top: 20px;
 
-    min-width: 30vw;
-    max-width: 80vw;
-  }
+      a { text-decoration: none; }
 
-  .home-header__chevron {
-    @extend .__centered;
-    opacity: 0.9;
-
-    width: 100px;
-    cursor: pointer;
-
-    -moz-animation: chevron-bounce 1.5s infinite;
-    -webkit-animation: chevron-bounce 1.5s infinite;
-    animation: chevron-bounce 1.5s infinite;
-
-    @keyframes chevron-bounce {
-      0%, 20%, 50%, 80%, 100% {
-        transform: translateY(0);
-      }
-      40% {
-        transform: translateY(-30px);
-      }
-      60% {
-        transform: translateY(-15px)
+      div {
+        background-color: $beige-background;
+        border: 3px solid $white-background;
+        border-radius: 5px;
+        color: $white-text;
+        padding: 10px 25px;
+        margin: 0 15px;
       }
     }
   }

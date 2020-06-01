@@ -5,41 +5,61 @@ const AboutSection = (): JSX.Element => {
   return (
     <div className={"home__about-section"}>
       <div className={"about__inner-div"}>
-        <h1 id={"about"}>About</h1>
+        <h3>
+          There's a lot of information to know about me, so to help, I wanted to answer a couple of FAQs
+          to help you understand me.
+        </h3>
+        <h3 id={"about"}>Who am I?</h3>
         <p>
-          I'm a Software Developer mostly experienced in JavaScript/TypeScript and Python applications ranging
-          from web apps, REST APIs, API management, and general website design.
+          My name is Judson, and I'm a Full Stack Software Engineer specializing in Web Applications.
+        </p>
+        <h3 id={"stack"}>What stack do you use?</h3>
+        <p>
+          I don't marry myself to one end-all-be-all stack, but rather I want to constantly fill my software toolbox
+          with tools that can build the most optimal solution. Sometimes it will need something fast as possible
+          like Rust, but sometimes it needs to work with a wider developer community, like Python or JavaScript.
+        </p>
+        <h3 id={"prefer"}>Okay, what do you <i>prefer</i> to work with?</h3>
+        <p>
+          Most of my Frontend projects use ReactDOM and frameworks that use the ReactDOM like Create React App, Next,
+          and Gatsby <a href={"https://github.com/judsonjames/gatsby-judsonjames.com"}>(like this site)</a>. Sometimes
+          I'll dabble with Vue if the project is already using it.
         </p>
         <p>
-          I'm currently employed by 52inc, a company that works with others both large and small to get
-          software projects up and going quickly and efficiently. My role is Software Developer, focusing on
-          a mix of web and server applications. I also accept freelance work on a case-by-case basis, if
-          you're interested in working together, you can contact me.
+          Some Example solutions would be:
+          <ul>
+            <li>
+              Gatsby + Netlify + Contentful CMS
+            </li>
+            <li>
+              Next + Netlify
+            </li>
+            <li>
+              MERN
+            </li>
+            <li>
+              React + Python/Rust backend implementation + AWS/Heroku
+            </li>
+          </ul>
         </p>
         <p>
-          Some examples of my past work include:
+          For backend, I'm experienced with both Monolithic frameworks like Django, but also more light-weight packages
+          like Falcon, Hug for Python. For my Node backend projects I almost always use Express for CRUD apps and Apollo
+          for GraphQL projects. I'm gradually shifting my side projects to use Rust more than Python or JS.
         </p>
-        <ul>
-          <li>React Apps</li>
-          <li>Next.js Server-Rendered Apps</li>
-          <li>Gatsby.js Static Sites</li>
-          <li>Static Sites, REST APIs, and other operations with Django</li>
-          <li>REST APIs written with Hug, powered by SQLAlchemy and Marshmallow</li>
-          <li>Containerized software written and managed with Docker; hosted by various platforms</li>
-          <li>Server-less web and mobile applications powered by Firebase</li>
-          <li>2D and 3D game development with Unity, Unreal, and other game engines</li>
-          <li>Robotics engineering and design, both in the hardware and software architectures</li>
-        </ul>
+        <h3 id={"robotics"}>But this is all Web Dev, your resume said you do Robotics as well?</h3>
         <p>
-          Technology is constantly evolving, and every technical challenge has different needs, so knowing
-          a variety of software makes for an overall better product. Lately I've been working to learn more
-          with Rust, as I enjoy working with lower-level languages such as C/C++ and can apply Rust to the
-          same kind of projects listed above, but can expand to other possibilities as well.
+          You read that right. Before I did mostly Web projects, I was actively involved in building algorithms to be
+          used in robotics and virtual simulations and games. I'm still actively involved in the FIRST Robotics
+          Competition as a Mentor to help students learn more about computing and to give back.
+        </p>
+        <h3 id={"other"}>Enough about Software, what else do you like to do?</h3>
+        <p>
+          I'm a life-long gamer, which how I ended up in the software industry, so I play regularly. My girlfriend and
+          I play JRPGS/casual games and stream on Twitch for fun.
         </p>
         <p>
-          When I'm not working on software projects, I can be found streaming on Twitch, discussing software
-          with friends over Discord, and tinkering with the most optimal hardware solutions for
-          myself and my girlfriend.
+          I also enjoy cooking, playing with the latest tech, and I'm currently teaching myself Japanese.
         </p>
       </div>
     </div>

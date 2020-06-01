@@ -4,8 +4,7 @@
 #ContactPage {
   background-color: $blue-dodger;
   color: $white-text;
-  font-family: $font-family;
-  min-height: 100vh;
+  padding-bottom: 100px;
 
   h1 {
     margin: 0 auto;
@@ -15,12 +14,29 @@
 
   p {
     font-size: 1.25rem;
-    line-height: 1.5;
-    margin: 50px auto 0;
-    width: 75%;
+    line-height: 1.75;
+    margin: 25px auto 0;
+    width: 90%;
 
     @include desktop-view {
       width: 50%;
+    }
+  }
+
+  div.confirmation-dialogue {
+    //background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    margin: 25px auto;
+    padding: 0 0 50px;
+    text-align: center;
+    width: 90%;
+
+    iframe.giphy-embed {
+      border-radius: 5px;
+      margin: 25px auto 0;
+      width: fit-content;
     }
   }
 }
