@@ -23,8 +23,7 @@ const Work = (): JSX.Element => {
           timeline are:
           <ul>
             <li>I am currently a mid-level developer at 52inc</li>
-            <li>My GitHub is <a href={"https://github.com/judsonjames"} target={"_"}>judsonjames</a></li>
-            <li>I began my career in software engineering since 2017, while in college</li>
+            <li>I began my career in software engineering in 2017, while in college</li>
             <li>I graduated from the University of South Carolina in May, 2019</li>
             <li>My main software languages are JavaScript/TypeScript, Python, and Rust</li>
             <li>My tech stack ranges depending on the project and what needs to be done</li>

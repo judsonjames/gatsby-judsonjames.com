@@ -4,7 +4,7 @@
 div#BlogPostContainer {
   background-color: $blue-dodger;
   margin: 0 auto;
-  padding: 25px;
+  padding: $padding-top 25px 50px;
 
   div.blog-post {
     &__meta {

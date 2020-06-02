@@ -1,8 +1,9 @@
 @import "static/styles/constants";
+@import "static/styles/breakpoints";
 
 .work-page {
   background-color: $blue-dodger;
-  padding: 25px 0 0;
+  padding: $padding-top 0 0;
 
   &__description {
     background-color: $white-background;
@@ -12,5 +13,10 @@
     margin: 0 auto;
     padding: 25px;
     width: 90%;
+
+    @include mobile-view {
+      font-size: 0.85rem;
+      width: 87.5%;
+    }
   }
 }

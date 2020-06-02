@@ -3,5 +3,6 @@
 div#BlogEntriesList {
   background-color: $blue-dodger;
   margin: 0 auto;
-  padding-bottom: 50px;
+  min-height: 100vh;
+  padding: $padding-top 0 0;
 }

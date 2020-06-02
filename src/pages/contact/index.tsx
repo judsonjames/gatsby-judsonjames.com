@@ -62,7 +62,7 @@ const Contact = (): JSX.Element => {
           ? SuccessfulForm
           : failed
             ? FailedForm
-              : <ContactForm badResponseCallback={handleFailure} confirmationCallback={handleSuccess}/>
+              : <ContactForm handleFailure={handleFailure} handleSuccess={handleSuccess}/>
         }
       </div>
     </SiteLayout>
