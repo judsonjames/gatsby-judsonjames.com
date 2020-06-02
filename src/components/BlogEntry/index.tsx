@@ -11,7 +11,7 @@ interface IBlogEntryProps {
 }
 
 const BlogTag = (props: { text: string, key: string }): JSX.Element => (
-  <div className={"blog-tags__item"} key={props.key}>
+  <div className={"blog-tags__item"}>
     {props.text}
   </div>
 );
@@ -31,7 +31,7 @@ const BlogEntry: ComponentType<IBlogEntryProps> = (props: IBlogEntryProps): JSX.
       </div>
       <div className={"blog-tags__container"}>
         {props.tags.map((tag: string, i: number) => (
-          <BlogTag key={`${props.title}-${i}`} text={tag}/>
+          <BlogTag text={tag} key={`${props.title}-${i}`}/>
         ))}
       </div>
     </div>

@@ -1,3 +1,4 @@
+import { Link } from "gatsby";
 import React from "react";
 import "./styles.scss";
 
@@ -9,12 +10,12 @@ const HomeHeader = (): JSX.Element => {
         <h1 className={"home-header__name"}>Judson James</h1>
         <h3 className={"home-header__title"}>Full Stack Engineer</h3>
         <div className={"home-header__buttons"}>
-          <a href={"/docs/JudsonJames-Resume.pdf"} target={"_"}>
+          <a href={"/docs/JudsonJames-Resume.pdf"} target={"_blank"} rel={"noreferrer noopener"}>
             <div>
               <span>Resume</span>
             </div>
           </a>
-          <a href={"https://github.com/judsonjames"} target={"_"}>
+          <a href={"https://github.com/judsonjames"} target={"_blank"} rel={"noreferrer noopener"}>
             <div>
               <span>GitHub</span>
             </div>

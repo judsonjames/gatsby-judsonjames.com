@@ -18,7 +18,7 @@ export interface ItemProps {
 }
 
 const tagItem = (text: string): JSX.Element => (
-  <span className={"tag-item"}>
+  <span className={"tag-item"} key={`tag-${text}`}>
         {text}
     </span>
 );

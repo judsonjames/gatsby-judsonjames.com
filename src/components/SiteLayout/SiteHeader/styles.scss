@@ -18,10 +18,10 @@
 
     &.active {
       p {
-        color: $blue-dodger;
+        color: rgba(0, 0, 0, 0.75);
       }
       svg.header__nav-icon {
-        fill: $blue-dodger;
+        fill: rgba(0, 0, 0, 0.75);
       }
     }
 

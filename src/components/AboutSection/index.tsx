@@ -12,12 +12,26 @@ const AboutSection = (): JSX.Element => {
         <h3 id={"links"}>
           What links would you like to share?
         </h3>
-        <p>
-          <li><a href={"/docs/JudsonJames-Resume.pdf"} target={"_"}>My Resume</a></li>
-          <li><a href={"https://github.com/judsonjames"} target={"_"}>My GitHub</a></li>
-          <li><a href={"https://www.linkedin.com/in/judson-james-a63844117/"} target={"_"}>My LinkedIn</a></li>
-          <li>You can also send a message on my <a href={"/contact"}>Contact</a> page</li>
-        </p>
+        <li>
+          <a href={"/docs/JudsonJames-Resume.pdf"} target={"_blank"} rel={"noreferrer noopener"}>
+            My Resume
+          </a>
+        </li>
+        <li>
+          <a href={"https://github.com/judsonjames"} target={"_blank"} rel={"noreferrer noopener"}>
+            My GitHub
+          </a>
+        </li>
+        <li>
+          <a
+            href={"https://www.linkedin.com/in/judson-james-a63844117/"}
+            target={"_blank"}
+            rel={"noreferrer noopener"}
+          >
+            My LinkedIn
+          </a>
+        </li>
+        <li>You can also send a message on my <a href={"/contact"}>Contact</a> page</li>
         <h3 id={"stack"}>What stack do you use?</h3>
         <p>
           I don't marry myself to one end-all-be-all stack, but rather I want to constantly fill my software toolbox
@@ -32,24 +46,22 @@ const AboutSection = (): JSX.Element => {
         </p>
         <p>
           Some Example solutions would be:
-          <ul>
-            <li>
-              Gatsby + Netlify + Contentful CMS
-            </li>
-            <li>
-              Next + Netlify
-            </li>
-            <li>
-              MERN
-            </li>
-            <li>
-              React + Python/Rust backend implementation + AWS/Heroku
-            </li>
-            <li>
-              React + Apollo Engine with standalone GraphQL or including REST endpoints
-            </li>
-          </ul>
         </p>
+        <li>
+          Gatsby + Netlify + Contentful CMS
+        </li>
+        <li>
+          Next + Netlify
+        </li>
+        <li>
+          MERN
+        </li>
+        <li>
+          React + Python/Rust backend implementation + AWS/Heroku
+        </li>
+        <li>
+          React + Apollo Engine with standalone GraphQL or including REST endpoints
+        </li>
         <p>
           For backend, I'm experienced with both Monolithic frameworks like Django, but also more light-weight packages
           like Falcon, Hug for Python. For my Node backend projects I almost always use Express for CRUD apps and Apollo

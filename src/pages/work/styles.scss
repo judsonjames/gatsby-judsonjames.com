@@ -11,12 +11,13 @@
     border-radius: 5px;
     line-height: 1.5;
     margin: 0 auto;
+    max-width: 1170px;
     padding: 25px;
     width: 90%;
 
     @include mobile-view {
       font-size: 0.85rem;
-      width: 87.5%;
+      width: 85%;
     }
   }
 }

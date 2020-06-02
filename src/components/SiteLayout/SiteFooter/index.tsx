@@ -1,3 +1,4 @@
+import { Link } from "gatsby";
 import React from "react";
 import "./styles.scss";
 
@@ -9,16 +10,16 @@ const SiteFooter = (): JSX.Element => {
           <a href={"https://github.com/judsonjames"}>GitHub</a>
         </span>
         <span>
-          <a href={"/about-me"}>About</a>
+          <Link to={"/about-me"}>About</Link>
         </span>
         <span>
-          <a href={"/work"}>Work</a>
+          <Link to={"/work"}>Work</Link>
         </span>
         <span>
-          <a href={"/blog"}>Blog</a>
+          <Link to={"/blog"}>Blog</Link>
         </span>
         <span>
-          <a href={"/contact"}>Contact</a>
+          <Link to={"/contact"}>Contact</Link>
         </span>
       </div>
       <div className={"github-link"}>

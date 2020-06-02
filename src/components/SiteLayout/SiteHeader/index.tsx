@@ -1,3 +1,4 @@
+import { Link } from "gatsby";
 import React from "react";
 // @ts-ignore
 import Blog from "../../../../static/svg/book.svg";
@@ -66,14 +67,14 @@ const SiteHeader = (): JSX.Element => {
     <div id={"site-header"}>
       {validPaths.map((path: IPath, i: number) => {
         return (
-          <a key={i} href={path.slug.toLowerCase()}>
+          <Link key={`${path.title}`} to={path.slug.toLowerCase()} activeClassName={"active"}>
             <div key={i}>
               {path.icon}
               <p key={i}>
                 {path.title}
               </p>
             </div>
-          </a>
+          </Link>
         );
       })}
     </div>
