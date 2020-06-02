@@ -11,7 +11,7 @@ module.exports = {
     siteLanguage: "en",
     siteLogo: "/img/profile_pic.jpg",
     // siteUrl: "https://judsonjames.dev",
-    siteUrl: "https://focused-lamarr-93f88f.netlify.com/",
+    siteUrl: "https://judsonjames.com",
 
     siteTitleAlt: "Judson James",
 

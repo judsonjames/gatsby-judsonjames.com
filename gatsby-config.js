@@ -15,7 +15,7 @@ module.exports = {
   siteMetadata: {
     name: `Judson James Personal Portfolio`,
     tagline: `Full Stack Software Engineer ready to take on any projects!`,
-    siteUrl: `https://focused-lamarr-93f88f.netlify.com/`
+    siteUrl: `https://judsonjames.com`
   },  
   plugins: [
     `gatsby-plugin-preload-link-crossorigin`,
@@ -48,8 +48,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-robots-txt`,
       options: {
-        host: `https://focused-lamarr-93f88f.netlify.com/`,
-        sitemap: `https://focused-lamarr-93f88f.netlify.com/sitemap.xml`,
+        host: `https://judsonjames.com`,
+        sitemap: `https://judsonjames.com/sitemap.xml`,
         policy: [{ userAgent: '*', allow: '/'}]
       },
     },
