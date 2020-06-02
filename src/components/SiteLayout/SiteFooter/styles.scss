@@ -2,20 +2,22 @@
 @import "static/styles/breakpoints";
 
 footer#SiteFooter {
-  border-top: 3px solid $white-text;
   background-color: $beige-background;
+  border-top: 3px solid $white-text;
+  bottom: 0;
   color: $white-text;
   display: flex;
   justify-content: space-evenly;
-  min-height: 40px;
+  min-height: 50px;
+  position: relative;
+  width: 100%;
 
   @include mobile-view {
-    flex-direction: column;
-    padding: 10px 0;
+    display: none; // There's not an easy way to view the footer in mobile
   }
 
   div.general-links {
-    margin: auto auto;
+    margin: auto;
 
     a {
       color: $white-text;

@@ -5,8 +5,7 @@ div.blog-entry {
   color: $white-text;
   font-size: 1.25rem;
   margin: 0 auto;
-  min-height: 200px;
-  padding: 50px 0 25px;
+  padding: 50px 0;
   width: 75%;
 
   @include large-desktop-view {
@@ -15,6 +14,10 @@ div.blog-entry {
 
   @include mobile-view {
     width: 90%;
+  }
+
+  &:first-child {
+    padding: 0 0 50px; // because of the nav bar
   }
 
   &:not(:last-child) {
@@ -29,6 +32,10 @@ div.blog-entry {
 
   p.date-published {
     font-size: 1.5rem;
+
+    @include mobile-view {
+      font-size: 1.1rem;
+    }
   }
 
   .blog-markdown {
@@ -37,6 +44,10 @@ div.blog-entry {
     color: black;
     margin: 10px 0;
     padding: 10px;
+
+    @include mobile-view {
+      font-size: 1.1rem;
+    }
   }
 
   div.view-container {
@@ -58,6 +69,12 @@ div.blog-entry {
         padding: 10px 25px;
         text-align: center;
         width: fit-content;
+
+        @include mobile-view {
+          font-size: 1rem;
+          margin: 18px 0;
+          padding: 5px 15px;
+        }
       }
     }
   }
@@ -73,10 +90,15 @@ div.blog-entry {
       background-color: gray;
       border: 3px solid $white-text;
       border-radius: 15px;
-      padding: 10px 10px;
+      padding: 10px;
 
       &:not(:first-child) {
         margin: 0 10px;
+      }
+
+      @include mobile-view {
+        font-size: 1rem;
+        padding: 7px;
       }
     }
   }

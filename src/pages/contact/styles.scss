@@ -1,11 +1,13 @@
 @import "static/styles/constants";
 @import "static/styles/breakpoints";
 
+$form-width-desktop: 50%;
+
 #ContactPage {
   background-color: $blue-dodger;
   color: $white-text;
-  padding-bottom: 100px;
-
+  padding: 60px 0;
+  min-height: 100vh;
   h1 {
     margin: 0 auto;
     padding: 50px 0 0;
@@ -19,12 +21,12 @@
     width: 90%;
 
     @include desktop-view {
-      width: 50%;
+      width: $form-width-desktop;
     }
   }
 
   div.confirmation-dialogue {
-    //background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.5);
     border-radius: 5px;
     display: flex;
     flex-direction: column;
@@ -37,6 +39,10 @@
       border-radius: 5px;
       margin: 25px auto 0;
       width: fit-content;
+    }
+
+    @include desktop-view {
+      width: $form-width-desktop;
     }
   }
 }

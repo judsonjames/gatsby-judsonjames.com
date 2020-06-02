@@ -5,13 +5,18 @@ const AboutSection = (): JSX.Element => {
   return (
     <div className={"home__about-section"}>
       <div className={"about__inner-div"}>
-        <h3>
-          There's a lot of information to know about me, so to help, I wanted to answer a couple of FAQs
-          to help you understand me.
-        </h3>
-        <h3 id={"about"}>Who am I?</h3>
+        <h3 id={"about"}>Who are you?</h3>
         <p>
           My name is Judson, and I'm a Full Stack Software Engineer specializing in Web Applications.
+        </p>
+        <h3 id={"links"}>
+          What links would you like to share?
+        </h3>
+        <p>
+          <li><a href={"/docs/JudsonJames-Resume.pdf"} target={"_"}>My Resume</a></li>
+          <li><a href={"https://github.com/judsonjames"} target={"_"}>My GitHub</a></li>
+          <li><a href={"https://www.linkedin.com/in/judson-james-a63844117/"} target={"_"}>My LinkedIn</a></li>
+          <li>You can also send a message on my <a href={"/contact"}>Contact</a> page</li>
         </p>
         <h3 id={"stack"}>What stack do you use?</h3>
         <p>
@@ -39,6 +44,9 @@ const AboutSection = (): JSX.Element => {
             </li>
             <li>
               React + Python/Rust backend implementation + AWS/Heroku
+            </li>
+            <li>
+              React + Apollo Engine with standalone GraphQL or including REST endpoints
             </li>
           </ul>
         </p>

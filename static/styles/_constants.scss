@@ -21,6 +21,8 @@ $silver-background: rgba(224,224,224 ,1);
 $white-text: rgba(255, 255, 255, 0.9);
 $white-background: rgba(255, 255, 255, 0.7);
 
+$padding-top: 100px; // to account for the abs pos header
+
 // Browser reset
 html, body {
   font-family: $font-family;

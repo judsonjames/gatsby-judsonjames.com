@@ -58,7 +58,7 @@ const ContactForm = (props: IContactFormProps): JSX.Element => {
   };
 
   return (
-      <div id={"ContactPage"}>
+      <div id={"ContactForm"}>
         <Formik
           initialValues={{email, message, name}}
           onSubmit={contactFormSubmit}

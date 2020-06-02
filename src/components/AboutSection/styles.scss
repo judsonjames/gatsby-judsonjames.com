@@ -6,7 +6,7 @@
   background-color: $blue-dodger;
   color: $white-text;
   min-height: 100vh;
-  padding: 25px 0;
+  padding: $padding-top 0 50px;
 
   .about__inner-div {
     background-color: $white-background;
@@ -14,7 +14,7 @@
     color: rgba(0, 0, 0, 0.9);
     margin: 0 auto;
     padding: 2.5vh 0 2.5vh 5vw;
-    width: 80%;
+    width: 85%;
 
     @include mobile-view {
       width: 90%;
