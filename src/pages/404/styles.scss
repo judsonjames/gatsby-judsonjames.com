@@ -3,8 +3,26 @@
 @import "static/styles/breakpoints";
 
 div.not-found {
-  height: $site-height-min;
   background-color: $blue-dodger;
+  color: $white-text;
+  display: flex;
+  flex-direction: column;
+  height: $site-height-min;
+  justify-content: center;
+
+
+  p {
+    font-size: 1rem;
+    text-align: center;
+
+    &.not-found__message {
+      font-size: 3rem;
+    }
+  }
+
+  a {
+    color: $white-text;
+  }
 
   &__base {
     @extend .__centered;

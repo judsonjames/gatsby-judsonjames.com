@@ -44,7 +44,7 @@ const Blog: ComponentType<IPageProps> = (props: IPageProps): JSX.Element => {
             key={`${node.title}-${i}`}
             description={node.description.description}
             published={node.publishDate}
-            slug={node.slug}
+            slug={`/blog/${node.slug}`}
             tags={node.tags}
             title={node.title}
           />

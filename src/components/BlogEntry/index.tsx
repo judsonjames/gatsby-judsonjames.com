@@ -1,3 +1,4 @@
+import { Link } from "gatsby";
 import React, { ComponentType } from "react";
 import ReactMarkdown from "react-markdown";
 import "./styles.scss";
@@ -23,11 +24,11 @@ const BlogEntry: ComponentType<IBlogEntryProps> = (props: IBlogEntryProps): JSX.
       <p className={"date-published"}>{props.published}</p>
       <ReactMarkdown source={props.description} className={"blog-markdown"}/>
       <div className={"view-container"}>
-        <a href={props.slug} className={"view-button__link"}>
+        <Link to={props.slug} className={"view-button__link"}>
           <div className={"view-button__container"}>
             <span>View</span>
           </div>
-        </a>
+        </Link>
       </div>
       <div className={"blog-tags__container"}>
         {props.tags.map((tag: string, i: number) => (

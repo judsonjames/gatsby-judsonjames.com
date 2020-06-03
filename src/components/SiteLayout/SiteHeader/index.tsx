@@ -10,6 +10,7 @@ import Face from "../../../../static/svg/face.svg";
 import Home from "../../../../static/svg/home.svg";
 // @ts-ignore
 import Work from "../../../../static/svg/work.svg";
+import { globalHistory } from "@reach/router";
 import "./styles.scss";
 
 interface IMenuItemProps {
@@ -32,22 +33,22 @@ const validPaths: IPath[] = [
   },
   {
     icon: <Face className={"header__nav-icon"}/>,
-    slug: "/about-me",
+    slug: "/about-me/",
     title: "About Me",
   },
   {
     icon: <Work className={"header__nav-icon"}/>,
-    slug: "/work",
+    slug: "/work/",
     title: "Work",
   },
   {
     icon: <Blog className={"header__nav-icon"}/>,
-    slug: "/blog",
+    slug: "/blog/",
     title: "Blog",
   },
   {
     icon: <Email className={"header__nav-icon"}/>,
-    slug: "/contact",
+    slug: "/contact/",
     title: "Contact",
   },
 ];
@@ -58,16 +59,22 @@ const SiteHeader = (): JSX.Element => {
    * @param {string} slug
    * @returns isActiveTab
    */
-  // const checkActiveTab = (slug: string): boolean => {
-  //   const url: string = !!window ? window.location.href : "";
-  //   return url.includes(slug);
-  // };
+  const checkActiveTab = (slug: string): boolean => {
+    const { location } = globalHistory;
+    const { pathname } = location;
+    // All paths include the "/" in the pathname, so we have to check for that string
+    if (slug !== "/" && pathname.includes(slug)) {
+      return true;
+    } else {
+      return slug === "/" && pathname === slug;
+    }
+  };
 
   return (
     <div id={"site-header"}>
       {validPaths.map((path: IPath, i: number) => {
         return (
-          <Link key={`${path.title}`} to={path.slug.toLowerCase()} activeClassName={"active"}>
+          <Link key={`${path.title}`} to={path.slug.toLowerCase()} className={`${checkActiveTab(path.slug) ? "active" : undefined}`}>
             <div key={i}>
               {path.icon}
               <p key={i}>
