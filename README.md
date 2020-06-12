@@ -5,6 +5,9 @@ This website is to serve as my professional portfolio, including my previous wor
 
 Requirements
 - Node version 12
+- A running Contentful service
+  - If you plan to not use Contentful, you will have to modify `gatsby-config.js` and remove the Contentful check. Otherwise
+    you wil run into the build check.
 
 This Gatsby site was built from a base template and built to scale
 ```
