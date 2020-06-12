@@ -67,6 +67,12 @@ module.exports = {
       }
     },
     {
+      resolve: `gatsby-plugin-canonical-urls`,
+      options: {
+        siteUrl: `https://www.judsonjames.com`,
+      },
+    },
+    {
       resolve: `gatsby-source-contentful`,
       options: contentfulConfig,
     },
