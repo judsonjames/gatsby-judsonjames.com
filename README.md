@@ -4,8 +4,7 @@
 This website is to serve as my professional portfolio, including my previous work, an about section, a blog powered by [Contentful](https://www.contentful.com/), and a contact form powered by [GetForm](https://getform.io/). The site itself is hosted with [Netlify](https://www.netlify.com/).
 
 Requirements
-- Node version 10 or higher (Gatsby requirement)
-
+- Node version 12
 
 This Gatsby site was built from a base template and built to scale
 ```
