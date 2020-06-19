@@ -14,7 +14,7 @@ $shadow-transition: 0.25s box-shadow;
   position: relative;
   width: 90%;
 
-  @include desktop-view {
+  @include min-width-1170p {
     width: 50%;
   }
 

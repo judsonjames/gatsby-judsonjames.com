@@ -20,7 +20,7 @@
       width: 90%;
     }
 
-    @include large-desktop-view {
+    @include min-width-1500 {
       width: 50%;
     }
 

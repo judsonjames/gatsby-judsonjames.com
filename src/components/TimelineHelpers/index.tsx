@@ -1,5 +1,5 @@
 import React from "react";
-import {VerticalTimelineElement} from "react-vertical-timeline-component";
+import { VerticalTimelineElement } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
 import Code from "../../../static/svg/code.svg";
 import School from "../../../static/svg/school.svg";

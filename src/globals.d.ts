@@ -1,4 +1,4 @@
-import {FunctionComponent, SVGAttributes} from "react";
+import { FunctionComponent, SVGAttributes } from "react";
 
 declare module "*.scss" {
   const content: { [className: string]: string };

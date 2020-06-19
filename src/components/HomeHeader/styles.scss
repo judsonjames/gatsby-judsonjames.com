@@ -1,6 +1,7 @@
 @import "static/styles/breakpoints";
 @import "static/styles/constants";
 @import "static/styles/classes";
+@import "static/styles/functions";
 
 div#HomeHeader {
   background-color: $blue-dodger;
@@ -14,8 +15,20 @@ div#HomeHeader {
       @extend .__centered;
       border: 3px solid $white-text;
       border-radius: 50%;
-      max-width: 75vw;
-      min-width: 30vw;
+      height: auto;
+      width: 50%;
+
+      @include min-width-1500 {
+        max-width: 25vw;
+      }
+
+      @include mobile-view {
+        max-width: 85vw;
+      }
+
+      @include desktop-portrait {
+        max-width: 100%;
+      }
     }
 
     &__name {
@@ -30,12 +43,20 @@ div#HomeHeader {
       @include mobile-view {
         font-size: 1.5rem;
       }
+
+      @include desktop-portrait {
+        font-size: 3rem;
+      }
+
+      @include min-width-2100 {
+        font-size: 3rem;
+      }
     }
 
     &__title {
       @extend .__centered;
       color: $white-text;
-      font-size: 1.5rem;
+      font-size: GetTypographySize(2rem, 50rem, 700px, 2600px);
       font-weight: lighter;
       line-height: 1.5;
       text-align: center;
@@ -43,6 +64,9 @@ div#HomeHeader {
 
       @include mobile-view {
         font-size: 1.25rem;
+      }
+
+      @include desktop-portrait {
       }
     }
 
@@ -60,6 +84,10 @@ div#HomeHeader {
         color: $white-text;
         padding: 10px 25px;
         margin: 0 15px;
+
+        @include desktop-portrait {
+          font-size: 2rem;
+        }
       }
     }
   }

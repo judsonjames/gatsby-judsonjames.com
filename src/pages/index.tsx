@@ -7,7 +7,7 @@ const IndexPage = (): JSX.Element => {
     <SiteLayout
       title={"Judson James"}
       description={"A Full Stack Developer who loves to work with new and interesting projects."}
-      imageRef={"/img/profile_pic.jpg"}
+      imageRef={"/img/profile_pic_new.png"}
       hideFooter={true}
     >
       <HomeHeader/>

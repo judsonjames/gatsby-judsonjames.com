@@ -1,3 +1,4 @@
+import { globalHistory } from "@reach/router";
 import { Link } from "gatsby";
 import React from "react";
 // @ts-ignore
@@ -10,7 +11,6 @@ import Face from "../../../../static/svg/face.svg";
 import Home from "../../../../static/svg/home.svg";
 // @ts-ignore
 import Work from "../../../../static/svg/work.svg";
-import { globalHistory } from "@reach/router";
 import "./styles.scss";
 
 interface IMenuItemProps {
@@ -74,7 +74,7 @@ const SiteHeader = (): JSX.Element => {
     <div id={"site-header"}>
       {validPaths.map((path: IPath, i: number) => {
         return (
-          <Link key={`${path.title}`} to={path.slug.toLowerCase()} className={`${checkActiveTab(path.slug) ? "active" : undefined}`}>
+          <Link key={`${path.title}`} to={path.slug.toLowerCase()} className={checkActiveTab(path.slug) ? "active" : undefined}>
             <div key={i}>
               {path.icon}
               <p key={i}>

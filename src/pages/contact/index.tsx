@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import ContactForm from "../../components/ContactForm";
 import SiteLayout from "../../components/SiteLayout";
 import "./styles.scss";

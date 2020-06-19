@@ -8,7 +8,7 @@ const ErrorPage = (): JSX.Element => {
     <SiteLayout
       title={"Judson James | 404"}
       description={"This page was not found :("}
-      imageRef={"/img/profile_pic.jpg"}
+      imageRef={"/img/profile_pic_new.png"}
       hideFooter={true}
     >
       <div className={"not-found"}>

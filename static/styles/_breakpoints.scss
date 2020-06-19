@@ -1,18 +1,46 @@
 $breakpoint-mobile: 700px;
 $breakpoint-desktop: 1170px;
 $breakpoint-desktop-large: 1500px;
+$breakpoint-desktop-super-large: 2100px;
 
-@mixin large-desktop-view {
+@mixin min-width-2600 {
+  @media screen and (min-width: 2600px) {
+    @content
+  }
+}
+
+@mixin min-width-2100 {
+  @media screen and (min-width: $breakpoint-desktop-super-large){
+    @content
+  }
+}
+
+@mixin min-width-1500 {
   @media screen and (min-width: $breakpoint-desktop-large) {
     @content
   }
 }
 
-@mixin desktop-view {
+@mixin min-width-1170p {
   @media screen and (min-width: $breakpoint-desktop) {
     @content
   }
 }
+
+@mixin desktop-landscape {
+  @media screen and (orientation: landscape) {
+    @content
+  }
+}
+
+// Very specific media query where we want to adjust desktop portrait views
+// but not the mobile media queries.
+@mixin desktop-portrait {
+  @media screen and (orientation: portrait) and (min-width: $breakpoint-mobile) {
+    @content
+  }
+}
+
 @mixin mobile-view {
   @media screen and (max-width: $breakpoint-mobile) {
     @content

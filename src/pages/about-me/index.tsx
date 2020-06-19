@@ -7,7 +7,7 @@ const AboutMe = (): JSX.Element => {
     <SiteLayout
       title={"About Me"}
       description={"A short, but informative section giving you an idea of who I am and what I do."}
-      imageRef={"/img/profile_pic.jpg"}
+      imageRef={"/img/profile_pic_new.png"}
     >
         <AboutSection/>
     </SiteLayout>

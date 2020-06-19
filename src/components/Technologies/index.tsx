@@ -1,5 +1,5 @@
 import React from "react";
-import {frameworks, technologies} from "./data";
+import { frameworks, technologies } from "./data";
 
 const Technologies = (): JSX.Element => {
   return (

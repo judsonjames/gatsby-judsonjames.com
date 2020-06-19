@@ -1,5 +1,5 @@
 import React from "react";
-import SEO, {ISEOProps} from "../SEO";
+import SEO, { ISEOProps } from "../SEO";
 import SiteFooter from "./SiteFooter";
 import SiteHeader from "./SiteHeader";
 import "./styles.scss";

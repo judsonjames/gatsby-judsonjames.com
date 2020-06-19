@@ -9,7 +9,7 @@ div.blog-entry {
   padding: 50px 0;
   width: 75%;
 
-  @include large-desktop-view {
+  @include min-width-1500 {
     width: 65%;
   }
 
