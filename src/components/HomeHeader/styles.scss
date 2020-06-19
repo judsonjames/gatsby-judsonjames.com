@@ -51,12 +51,16 @@ div#HomeHeader {
       @include min-width-2100 {
         font-size: 3rem;
       }
+
+      @include min-width-2600 {
+        font-size: 4rem;
+      }
     }
 
     &__title {
       @extend .__centered;
       color: $white-text;
-      font-size: GetTypographySize(2rem, 50rem, 700px, 2600px);
+      font-size: 1.5rem;
       font-weight: lighter;
       line-height: 1.5;
       text-align: center;
@@ -67,6 +71,13 @@ div#HomeHeader {
       }
 
       @include desktop-portrait {
+        @include min-width-1170 {
+          font-size: 2rem;
+        }
+      }
+
+      @include min-width-2600 {
+        font-size: 3rem;
       }
     }
 
@@ -87,6 +98,14 @@ div#HomeHeader {
 
         @include desktop-portrait {
           font-size: 2rem;
+        }
+
+        @include min-width-2100 {
+          font-size: 2rem;
+        }
+
+        @include min-width-2600 {
+          font-size: 3rem;
         }
       }
     }

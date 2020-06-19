@@ -20,7 +20,7 @@ $form-width-desktop: 50%;
     margin: 25px auto 0;
     width: 90%;
 
-    @include min-width-1170p {
+    @include min-width-1170 {
       width: $form-width-desktop;
     }
   }
@@ -41,7 +41,7 @@ $form-width-desktop: 50%;
       width: fit-content;
     }
 
-    @include min-width-1170p {
+    @include min-width-1170 {
       width: $form-width-desktop;
     }
   }

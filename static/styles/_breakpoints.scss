@@ -21,7 +21,7 @@ $breakpoint-desktop-super-large: 2100px;
   }
 }
 
-@mixin min-width-1170p {
+@mixin min-width-1170 {
   @media screen and (min-width: $breakpoint-desktop) {
     @content
   }

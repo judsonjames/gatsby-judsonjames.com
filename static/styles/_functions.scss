@@ -3,9 +3,9 @@
   @return 0.5*($width-view - $width-object);
 }
 
-// Something is wrong with this function, too lazy to fix it now
+// Something is wrong with this function, will fix later
 @function GetTypographySize($min-size, $max-size, $min-vw, $max-vw) {
-  $size-range: calc(#{$max-size} - #{$min-size});
-  $width-range: calc(#{$max-vw} - #{$min-vw});
+  $size-range: $max-size - $min-size;
+  $width-range: $max-vw - $min-vw;
   @return calc(#{$min-size} + #{$size-range} * (calc(100vw - #{$min-vw}) / (#{$width-range})));
 }

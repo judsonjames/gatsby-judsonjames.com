@@ -74,7 +74,11 @@ const SiteHeader = (): JSX.Element => {
     <div id={"site-header"}>
       {validPaths.map((path: IPath, i: number) => {
         return (
-          <Link key={`${path.title}`} to={path.slug.toLowerCase()} className={checkActiveTab(path.slug) ? "active" : undefined}>
+          <Link
+            key={`${path.title}`}
+            to={path.slug.toLowerCase()}
+            className={checkActiveTab(path.slug) ? "active" : undefined}
+          >
             <div key={i}>
               {path.icon}
               <p key={i}>
