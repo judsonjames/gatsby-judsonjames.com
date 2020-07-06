@@ -1,6 +1,8 @@
 @import "static/styles/constants";
 @import "static/styles/breakpoints";
 
+$max-width: 75%;
+
 .work-page {
   background-color: $blue-dodger;
   padding: $padding-top 0 0;
@@ -11,7 +13,7 @@
     border-radius: 5px;
     line-height: 1.5;
     margin: 0 auto;
-    max-width: 1170px;
+    max-width: $max-width;
     padding: 25px;
     width: 90%;
 
@@ -20,4 +22,8 @@
       width: 85%;
     }
   }
+}
+
+.timeline__component {
+  max-width: $max-width;
 }

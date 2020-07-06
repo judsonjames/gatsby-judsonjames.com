@@ -1,8 +1,12 @@
 @import "static/styles/constants";
 
 #site-layout {
-  background-color: #444444;
-  margin: auto;
+  background: #d18c4b;
+  background: -webkit-linear-gradient(left, #d18c4b, #4b91d2);
+  background: -moz-linear-gradient(left, #d18c4b, #4b91d2);
+  background: -ms-linear-gradient(left, #d18c4b, #4b91d2);
+  background: -o-linear-gradient(left, #d18c4b, #4b91d2);
+  background: linear-gradient(to right, #d18c4b, #4b91d2);  margin: auto;
   min-height: 100vh;
   position: relative;
 }

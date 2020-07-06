@@ -54,6 +54,11 @@ div#BlogPostContainer {
 
       @include min-width-1500 {
         width: 60%;
+        font-size: 1.25rem;
+      }
+
+      @include min-width-2600 {
+        font-size: 1.8rem;
       }
 
       @include tablet-view {
