@@ -1,3 +1,5 @@
+const path = require(`path`);
+
 require("dotenv").config({
   path: `.env.production`,
 });
@@ -26,6 +28,8 @@ module.exports = {
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-react-svg`,
     `gatsby-plugin-smoothscroll`,
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -79,7 +83,8 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/static/`,
+        name: `images`,
+        path: path.join(__dirname, `src`, `images`)
       }
     },
     {
