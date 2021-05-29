@@ -28,7 +28,7 @@ const Work = (): JSX.Element => {
           but to help you get a synopsis of my work experience, the highlights
           of the timeline are:
           <ul>
-            <li>I am currently a mid-level engineer at Trapp Technology</li>
+            <li>I am currently a Contract Software Engineer at Pavcon LLC</li>
             <li>
               I began my career in software engineering in 2017, while in
               college
@@ -44,13 +44,48 @@ const Work = (): JSX.Element => {
               My tech stack ranges depending on the project and what needs to be
               done
             </li>
+            <li>
+              Many of my side projects are open sourced on GitHub. If you want
+              to inquire about work-related projects, please contact me
+              directly.
+            </li>
           </ul>
         </div>
         <VerticalTimeline className={"timeline__component"}>
           <WorkItem
             title={"Software Engineer"}
+            subtitle={"Pavcon LLC"}
+            dates={"November 2020 - Present"}
+            description={
+              "Government Contracting work on several projects across the Full Stack. " +
+              "Projects are rapidly developed, so communication and organization is key. " +
+              "Many of my projects include but are not limited to Angular SPA Frontends, " +
+              "Django REST Framework Backends with Lambda functions," +
+              "Fully Serverless backends, " +
+              "Load and Security testing, and Data Pipelines involving complex and intense data."
+            }
+            tags={[
+              "Angular",
+              "TypeScript",
+              "Python",
+              "Django",
+              "Government Contracting",
+              "Postgres",
+              "AWS",
+              "Serverless",
+              "Node.js",
+              "Dynamo",
+              "Cognito",
+              "Athena",
+              "Data Science",
+              "K6",
+              "AppSec",
+            ]}
+          />
+          <WorkItem
+            title={"Software Engineer"}
             subtitle={"Trapp Technology"}
-            dates={"September 2020 - Present"}
+            dates={"September 2020 - November 2020"}
             description={
               "Full Stack Engineer focusing on secure applications that utilize React frontends and Go backends"
             }
